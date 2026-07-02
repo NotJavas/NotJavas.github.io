@@ -23,10 +23,14 @@
     </button>
     <nav class="nav-links" id="navLinks">
       <a href="#about">Sobre mí</a>
-      <a href="#skills">Stack</a>
       <a href="#projects">Proyectos</a>
+      <a href="#capturas">Capturas</a>
       <a href="#pricing">Precios</a>
       <a href="#contact" class="nav-cta">Contacto</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo día y modo noche">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+      </button>
     </nav>
   </div>
 </header>
@@ -136,9 +140,9 @@
 
     <div class="projects-grid">
 
-      <article class="project-card reveal">
+      <article class="project-card reveal featured">
         <div class="project-top">
-          <span class="project-cat">iOS App</span>
+          <span class="project-cat">iOS App · Proyecto insignia</span>
           <span class="project-badge badge-private">Repo privado</span>
         </div>
         <h3>MONEI</h3>
@@ -289,6 +293,85 @@
           <span>C#</span><span>Autómatas celulares</span><span>Simulación</span>
         </div>
       </article>
+
+      <article class="project-card reveal cta-card">
+        <h3>¿Tu proyecto aquí?</h3>
+        <p>Cuéntame qué necesitas y lo convertimos en el siguiente caso de esta lista.</p>
+        <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary">Platicamos por WhatsApp</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="shots" id="capturas">
+    <div class="section-head reveal">
+      <p class="section-tag">En pantalla</p>
+      <h2>Así se ven mis proyectos</h2>
+      <p class="pricing-sub">
+        Vistas ilustradas de las interfaces reales. ¿Quieres verlas funcionando? Pídeme un demo
+        en vivo — es gratis y sin compromiso.
+      </p>
+    </div>
+
+    <div class="shots-grid">
+
+      <figure class="shot reveal">
+        <div class="device phone">
+          <div class="device-notch"></div>
+          <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración de la interfaz de MONEI">
+            <rect x="16" y="28" width="110" height="14" rx="4" class="w-strong"/>
+            <rect x="16" y="56" width="168" height="96" rx="12" class="w-accent"/>
+            <rect x="30" y="72" width="60" height="9" rx="3" class="w-on-accent"/>
+            <rect x="30" y="120" width="90" height="12" rx="3" class="w-on-accent"/>
+            <rect x="146" y="118" width="24" height="16" rx="4" class="w-on-accent"/>
+            <rect x="16" y="170" width="80" height="42" rx="10" class="w-soft"/>
+            <rect x="104" y="170" width="80" height="42" rx="10" class="w-soft"/>
+            <rect x="16" y="230" width="100" height="10" rx="3" class="w-strong"/>
+            <rect x="16" y="252" width="168" height="30" rx="8" class="w-soft"/>
+            <rect x="16" y="290" width="168" height="30" rx="8" class="w-soft"/>
+            <rect x="16" y="328" width="168" height="30" rx="8" class="w-soft"/>
+          </svg>
+        </div>
+        <figcaption><strong>MONEI</strong> · Gestión de tarjetas y pagos — iOS</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <div class="device browser">
+          <div class="browser-bar"><span></span><span></span><span></span></div>
+          <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del panel de administración de Defiants">
+            <rect x="0" y="0" width="70" height="210" class="w-soft"/>
+            <rect x="12" y="16" width="46" height="9" rx="3" class="w-accent"/>
+            <rect x="12" y="40" width="46" height="7" rx="3" class="w-strong"/>
+            <rect x="12" y="58" width="46" height="7" rx="3" class="w-strong"/>
+            <rect x="12" y="76" width="46" height="7" rx="3" class="w-strong"/>
+            <rect x="86" y="16" width="120" height="12" rx="4" class="w-strong"/>
+            <rect x="86" y="44" width="66" height="44" rx="8" class="w-soft"/>
+            <rect x="160" y="44" width="66" height="44" rx="8" class="w-soft"/>
+            <rect x="234" y="44" width="66" height="44" rx="8" class="w-accent"/>
+            <rect x="86" y="104" width="214" height="22" rx="6" class="w-soft"/>
+            <rect x="86" y="134" width="214" height="22" rx="6" class="w-soft"/>
+            <rect x="86" y="164" width="214" height="22" rx="6" class="w-soft"/>
+          </svg>
+        </div>
+        <figcaption><strong>Defiants</strong> · Panel de administración de torneos — Web</figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <div class="device phone">
+          <div class="device-notch"></div>
+          <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del mapa de eventos de Destiny App">
+            <rect x="16" y="28" width="168" height="200" rx="12" class="w-soft"/>
+            <circle cx="70" cy="90" r="8" class="w-accent"/>
+            <circle cx="130" cy="130" r="8" class="w-accent"/>
+            <circle cx="90" cy="180" r="8" class="w-accent"/>
+            <path d="M30 210 Q 80 150 120 170 T 180 110" fill="none" class="w-line"/>
+            <rect x="16" y="244" width="110" height="12" rx="4" class="w-strong"/>
+            <rect x="16" y="268" width="168" height="42" rx="10" class="w-soft"/>
+            <rect x="16" y="318" width="168" height="42" rx="10" class="w-soft"/>
+          </svg>
+        </div>
+        <figcaption><strong>Destiny</strong> · Eventos de la ciudad en un mapa — Android</figcaption>
+      </figure>
 
     </div>
   </section>
