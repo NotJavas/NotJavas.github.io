@@ -211,11 +211,41 @@ main { position: relative; z-index: 1; }
 
 .about-text {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 0 24px;
   color: var(--text-dim);
   font-size: 1.05rem;
   max-width: 760px;
+}
+
+.trust-row {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trust-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.trust-item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  flex-shrink: 0;
 }
 
 /* Skills */
@@ -340,6 +370,20 @@ main { position: relative; z-index: 1; }
   margin-top: 16px;
 }
 
+.first-time-badge {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.combo-head { margin-top: 70px; }
+
 .pricing-grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -399,6 +443,15 @@ main { position: relative; z-index: 1; }
 }
 .price-usd { font-size: 0.82rem; }
 
+.price-old {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  text-decoration: line-through;
+  color: #6b6c76;
+  margin-bottom: 4px;
+}
+
 .pricing-cta { text-align: center; justify-content: center; width: 100%; }
 
 .pricing-note {
@@ -408,6 +461,71 @@ main { position: relative; z-index: 1; }
   color: var(--text-dim);
   font-size: 0.9rem;
   text-align: center;
+}
+
+/* Combo pricing */
+.combo-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.combo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.combo-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 92, 255, 0.4);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.combo-card.combo-featured {
+  border-color: rgba(124, 92, 255, 0.5);
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.1), rgba(34, 211, 238, 0.06));
+  grid-column: span 1;
+}
+
+.combo-card h4 { font-size: 1rem; margin: 0; }
+
+.combo-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.combo-tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.combo-tags span:not(:nth-child(odd)) { color: var(--accent-2); }
+
+.combo-discount {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-2);
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 999px;
+  padding: 4px 12px;
+  align-self: center;
+}
+
+.combo-card .price {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
 }
 
 /* Contact */
