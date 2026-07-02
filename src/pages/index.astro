@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PricingCard from '../components/PricingCard.astro';
+import ComboCard from '../components/ComboCard.astro';
+import SkillCard from '../components/SkillCard.astro';
+
+import projects from '../data/projects.json';
+import pricing from '../data/pricing.json';
+import combos from '../data/combos.json';
+import skills from '../data/skills.json';
+---
+
+<Layout>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">JAVAS<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#capturas">Capturas</a>
+        <a href="#pricing">Precios</a>
+        <a href="#contact" class="nav-cta">Contacto</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo día y modo noche">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow reveal">Disponible para proyectos freelance</p>
+        <h1 class="reveal">
+          Construyo productos digitales<br>
+          de punta a punta — <span class="grad-text">iOS, Android &amp; Web</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Soy <strong>Javier Sánchez</strong> — programo bajo el nombre <strong>Javas</strong> —
+          desarrollador full-stack y mobile en Querétaro, México.
+          Diseño e implemento apps y plataformas completas: desde la arquitectura y el backend
+          hasta la última animación de la interfaz.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+          <a href="javascript:void(0)" data-email="javaspowerful@gmail.com" class="btn btn-ghost">Contactar</a>
+        </div>
+        <div class="hero-social reveal">
+          <a href="https://github.com/NotJavas" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="javascript:void(0)" data-email="javaspowerful@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>
+          </a>
+          <a href="javascript:void(0)" data-phone="524425943653" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L4 20l.9-4.5A8.5 8.5 0 1 1 21 11.5z"/><path d="M9.5 9.5c.5 2.5 2.5 4.5 5 5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-5.5-3.5-6.5-6.5-.5-1.5 0-2.5 1.5-3l1 2-1 1.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label">Proyectos destacados</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Plataformas — iOS · Android · Web</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Full-stack, del diseño a producción</span></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <p class="section-tag">Sobre mí</p>
+        <h2>Me gusta construir cosas completas, no solo prototipos</h2>
+      </div>
+      <p class="about-text reveal">
+        Trabajo en todas las capas de un producto: interfaces nativas en SwiftUI y Jetpack Compose,
+        backends en .NET y Node.js, bases de datos relacionales, e incluso modelos de machine learning
+        construidos desde cero. Me interesa entender el problema completo — no solo escribir código,
+        sino diseñar arquitecturas que se puedan mantener y crecer.
+      </p>
+      <p class="about-text reveal">
+        Pero antes que nada, soy una persona real: estudio en la UAQ, en Querétaro, y aprendí la mayor
+        parte de esto por mi cuenta, por curiosidad más que por obligación. No hay agencia ni equipo
+        detrás de este sitio — solo yo, respondiendo mis propios correos y poniendo mi nombre en cada
+        proyecto que entrego. Hago esto porque quiero construirme una carrera honesta con lo que sé
+        hacer, y porque me gusta cuando algo que programé le resuelve un problema real a alguien.
+      </p>
+      <div class="trust-row reveal">
+        <div class="trust-item">Trato directo conmigo, sin intermediarios</div>
+        <div class="trust-item">Código público y verificable en GitHub</div>
+        <div class="trust-item">Respondo personalmente en menos de 24 horas</div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="section-head reveal">
+        <p class="section-tag">Stack &amp; herramientas</p>
+        <h2>Con qué construyo</h2>
+      </div>
+      <div class="skills-grid reveal">
+        {skills.map(skill => (
+          <SkillCard skill={skill} />
+        ))}
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-head reveal">
+        <p class="section-tag">Proyectos destacados</p>
+        <h2>Trabajo que muestra cómo pienso</h2>
+      </div>
+
+      <div class="projects-grid">
+        {projects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+
+        <article class="project-card reveal cta-card">
+          <h3>¿Tu proyecto aquí?</h3>
+          <p>Cuéntame qué necesitas y lo convertimos en el siguiente caso de esta lista.</p>
+          <a href="javascript:void(0)" data-phone="524425943653" target="_blank" rel="noopener" class="btn btn-primary">Platicamos por WhatsApp</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="shots" id="capturas">
+      <div class="section-head reveal">
+        <p class="section-tag">En pantalla</p>
+        <h2>Así se ven mis proyectos</h2>
+        <p class="pricing-sub">
+          Vistas ilustradas de las interfaces reales. ¿Quieres verlas funcionando? Pídeme un demo
+          en vivo — es gratis y sin compromiso.
+        </p>
+      </div>
+
+      <div class="shots-grid">
+
+        <figure class="shot reveal">
+          <div class="device phone">
+            <div class="device-notch"></div>
+            <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración de la interfaz de MONEI">
+              <rect x="16" y="28" width="110" height="14" rx="4" class="w-strong"/>
+              <rect x="16" y="56" width="168" height="96" rx="12" class="w-accent"/>
+              <rect x="30" y="72" width="60" height="9" rx="3" class="w-on-accent"/>
+              <rect x="30" y="120" width="90" height="12" rx="3" class="w-on-accent"/>
+              <rect x="146" y="118" width="24" height="16" rx="4" class="w-on-accent"/>
+              <rect x="16" y="170" width="80" height="42" rx="10" class="w-soft"/>
+              <rect x="104" y="170" width="80" height="42" rx="10" class="w-soft"/>
+              <rect x="16" y="230" width="100" height="10" rx="3" class="w-strong"/>
+              <rect x="16" y="252" width="168" height="30" rx="8" class="w-soft"/>
+              <rect x="16" y="290" width="168" height="30" rx="8" class="w-soft"/>
+              <rect x="16" y="328" width="168" height="30" rx="8" class="w-soft"/>
+            </svg>
+          </div>
+          <figcaption><strong>MONEI</strong> · Gestión de tarjetas y pagos — iOS</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="device browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del panel de administración de Defiants">
+              <rect x="0" y="0" width="70" height="210" class="w-soft"/>
+              <rect x="12" y="16" width="46" height="9" rx="3" class="w-accent"/>
+              <rect x="12" y="40" width="46" height="7" rx="3" class="w-strong"/>
+              <rect x="12" y="58" width="46" height="7" rx="3" class="w-strong"/>
+              <rect x="12" y="76" width="46" height="7" rx="3" class="w-strong"/>
+              <rect x="86" y="16" width="120" height="12" rx="4" class="w-strong"/>
+              <rect x="86" y="44" width="66" height="44" rx="8" class="w-soft"/>
+              <rect x="160" y="44" width="66" height="44" rx="8" class="w-soft"/>
+              <rect x="234" y="44" width="66" height="44" rx="8" class="w-accent"/>
+              <rect x="86" y="104" width="214" height="22" rx="6" class="w-soft"/>
+              <rect x="86" y="134" width="214" height="22" rx="6" class="w-soft"/>
+              <rect x="86" y="164" width="214" height="22" rx="6" class="w-soft"/>
+            </svg>
+          </div>
+          <figcaption><strong>Defiants</strong> · Panel de administración de torneos — Web</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="device phone">
+            <div class="device-notch"></div>
+            <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del mapa de eventos de Destiny App">
+              <rect x="16" y="28" width="168" height="200" rx="12" class="w-soft"/>
+              <circle cx="70" cy="90" r="8" class="w-accent"/>
+              <circle cx="130" cy="130" r="8" class="w-accent"/>
+              <circle cx="90" cy="180" r="8" class="w-accent"/>
+              <path d="M30 210 Q 80 150 120 170 T 180 110" fill="none" class="w-line"/>
+              <rect x="16" y="244" width="110" height="12" rx="4" class="w-strong"/>
+              <rect x="16" y="268" width="168" height="42" rx="10" class="w-soft"/>
+              <rect x="16" y="318" width="168" height="42" rx="10" class="w-soft"/>
+            </svg>
+          </div>
+          <figcaption><strong>Destiny</strong> · Eventos de la ciudad en un mapa — Android</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-head reveal">
+        <p class="section-tag">Precios</p>
+        <h2>¿Cuánto cuesta trabajar conmigo?</h2>
+        <p class="pricing-sub">
+          No necesitas saber de tecnología para trabajar conmigo — solo contarme qué problema quieres
+          resolver. Estos son puntos de partida; cada proyecto se cotiza según lo que realmente necesites.
+        </p>
+        <span class="first-time-badge">-20% en tu primer proyecto conmigo</span>
+      </div>
+
+      <div class="pricing-grid">
+        {pricing.map(pkg => (
+          <PricingCard pricing={pkg} />
+        ))}
+      </div>
+
+      <div class="section-head reveal combo-head">
+        <p class="section-tag">Combina y ahorra</p>
+        <h2>¿Necesitas más de uno? Sale más barato junto</h2>
+        <p class="pricing-sub">
+          Si un mismo proyecto combina varios de estos servicios, se comparte diseño, planeación y
+          configuración — y ese ahorro te lo paso a ti.
+        </p>
+      </div>
+
+      <div class="combo-grid">
+        {combos.map(combo => (
+          <ComboCard combo={combo} />
+        ))}
+      </div>
+
+      <p class="pricing-note reveal">
+        Los precios finales dependen del tamaño y los detalles del proyecto — escríbeme y platicamos sin
+        compromiso antes de cualquier cotización formal. El descuento de primer proyecto y los descuentos
+        por combinar servicios no se acumulan entre sí: aplica el que más te convenga.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-box reveal">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>Estoy disponible para trabajos freelance — apps móviles, plataformas web o sistemas a medida.
+           Escríbeme por donde te quede más cómodo.</p>
+        <div class="hero-actions">
+          <a href="javascript:void(0)" data-phone="524425943653" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp — 442 594 3653</a>
+          <a href="javascript:void(0)" data-email="javaspowerful@gmail.com" class="btn btn-ghost">javaspowerful@gmail.com</a>
+          <a href="https://github.com/NotJavas" target="_blank" rel="noopener" class="btn btn-ghost">GitHub — @NotJavas</a>
+        </div>
+        <p class="contact-alt">¿Prefieres llamar? <a href="javascript:void(0)" data-phone="524425943653">442 594 3653</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por Javier Sánchez (Javas) · Querétaro, México · <a href="javascript:void(0)" data-phone="524425943653">442 594 3653</a> · <a href="javascript:void(0)" data-email="javaspowerful@gmail.com">javaspowerful@gmail.com</a></p>
+  </footer>
+</Layout>

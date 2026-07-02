@@ -1,0 +1,34 @@
+---
+interface Props {
+  combo: {
+    id: string;
+    tags: string[];
+    title?: string;
+    discount: string;
+    priceOld: string;
+    priceNew: string;
+    priceUSD: string;
+    featured?: boolean;
+  };
+}
+
+const { combo } = Astro.props;
+---
+
+<article class={`combo-card reveal ${combo.featured ? 'combo-featured' : ''}`}>
+  <div class="combo-tags">
+    {combo.tags.map(tag => (
+      <span>{tag}</span>
+    ))}
+  </div>
+  {combo.title && <h4>{combo.title}</h4>}
+  <div class="combo-discount">{combo.discount}</div>
+  <div class="price">
+    <span class="price-old">{combo.priceOld}</span>
+    <div><strong>{combo.priceNew}</strong><span class="price-usd">({combo.priceUSD})</span></div>
+  </div>
+</article>
+
+<style is:global>
+  /* Styles are in styles.css */
+</style>
