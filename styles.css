@@ -335,6 +335,32 @@ main { position: relative; z-index: 1; }
 .project-card h3 { font-size: 1.25rem; }
 .project-card p { color: var(--text-dim); font-size: 0.92rem; margin: 0; }
 
+/* Case study block */
+.case {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.case-row {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 10px;
+  align-items: baseline;
+}
+.case-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+.case-row:last-child .case-label { color: var(--accent-2); }
+.case-row p { font-size: 0.86rem; }
+
 .features {
   list-style: none;
   margin: 2px 0 0;
@@ -542,6 +568,20 @@ main { position: relative; z-index: 1; }
 .contact-box p { color: var(--text-dim); margin-bottom: 30px; }
 .contact-box .hero-actions { justify-content: center; margin-bottom: 0; }
 
+.contact-alt {
+  margin-top: 22px !important;
+  margin-bottom: 0 !important;
+  font-size: 0.92rem;
+}
+.contact-alt a {
+  color: var(--accent-2);
+  font-family: 'JetBrains Mono', monospace;
+}
+.contact-alt a:hover { text-decoration: underline; }
+
+.footer a { color: var(--text-dim); }
+.footer a:hover { color: var(--accent-2); }
+
 .footer {
   text-align: center;
   padding: 30px 24px 50px;
@@ -578,4 +618,5 @@ main { position: relative; z-index: 1; }
   .nav-links.open { transform: translateY(0); }
   .nav-toggle { display: flex; }
   .hero-stats { grid-template-columns: 1fr; gap: 20px; }
+  .case-row { grid-template-columns: 1fr; gap: 3px; }
 }
