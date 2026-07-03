@@ -158,5 +158,93 @@
       "Diagramas de clases de la arquitectura del motor"
     ],
     "tags": ["C#", "Autómatas celulares", "Simulación"]
+  },
+  {
+    "id": "desaparecidos",
+    "category": "Data Science · Impacto Social",
+    "badge": {
+      "type": "private",
+      "text": "Código disponible bajo petición"
+    },
+    "title": "Personas Desaparecidas",
+    "featured": true,
+    "caseStudy": {
+      "problem": "Los datos públicos de desapariciones en México existen, pero dispersos y sin contexto son solo números.",
+      "solution": "Dashboard que cruza sexo, edad, entidad y estatus de la víctima para ver patrones reales, no cifras sueltas.",
+      "result": "Panel con miles de registros analizados, mostrando el repunte de casos a nivel nacional desde 2007."
+    },
+    "features": [
+      "Distribución por sexo, edad y estatus de la víctima",
+      "Ranking de entidades con más registros",
+      "Serie histórica de desapariciones por año (1960-2024)",
+      "Hecho para visibilizar un problema, no solo para practicar"
+    ],
+    "tags": ["Python", "Pandas", "Matplotlib", "Seaborn"]
+  },
+  {
+    "id": "centinel",
+    "category": "Data Science · Seguridad Vial",
+    "badge": {
+      "type": "private",
+      "text": "Código disponible bajo petición"
+    },
+    "title": "Centinel",
+    "featured": false,
+    "caseStudy": {
+      "problem": "Los accidentes en carreteras federales se analizan después de que ya ocurrieron, nunca antes.",
+      "solution": "Modelar la red carretera como un grafo y calcular un score de riesgo por tramo, no solo por punto aislado.",
+      "result": "Mapa de riesgo real sobre la red vial, señalando los tramos y cruces más peligrosos."
+    },
+    "features": [
+      "Modelado de la red vial como grafo (nodos y aristas)",
+      "Score de riesgo calculado por tramo de carretera",
+      "Visualización geoespacial del riesgo por color",
+      "Pensado para prevenir accidentes, no solo contarlos"
+    ],
+    "tags": ["Python", "NetworkX", "Grafos", "Geoespacial"]
+  },
+  {
+    "id": "titanic",
+    "category": "Machine Learning",
+    "badge": {
+      "type": "private",
+      "text": "Código disponible bajo petición"
+    },
+    "title": "Titanic — Predicción de Supervivencia",
+    "featured": false,
+    "caseStudy": {
+      "problem": "El ejercicio clásico de Kaggle se queda corto si solo entrenas un modelo y ya.",
+      "solution": "Comparé 5 modelos (Regresión Logística, SVM, Random Forest, XGBoost, Voting Classifier) con validación cruzada real.",
+      "result": "El SVM ganó con ~83% de accuracy — comparar en serio importa más que presumir un solo número."
+    },
+    "features": [
+      "Análisis exploratorio completo (edad, clase, tarifa, correlaciones)",
+      "5 modelos comparados con validación cruzada (CV=5)",
+      "Métricas completas: accuracy, precision, recall y F1-score",
+      "Ensamble final con Voting Classifier"
+    ],
+    "tags": ["Python", "Scikit-learn", "XGBoost", "Pandas"]
+  },
+  {
+    "id": "melts",
+    "category": "Web · Landing Page",
+    "badge": {
+      "type": "private",
+      "text": "Código disponible bajo petición"
+    },
+    "title": "Melts",
+    "featured": false,
+    "caseStudy": {
+      "problem": "Las landing pages de comida rápida suelen ser genéricas, sin personalidad de marca.",
+      "solution": "Identidad propia: tono directo, tipografía bold y una sección de transparencia que genera confianza.",
+      "result": "Landing completa con menú, marca y copywriting propio, lista para conectarse a un sistema de pedidos real."
+    },
+    "features": [
+      "Identidad de marca propia (tipografía, color, tono de voz)",
+      "Menú con tarjetas de producto y precios",
+      "Sección de transparencia ('¿Por qué tan barato?')",
+      "Diseño responsive de principio a fin"
+    ],
+    "tags": ["React", "Tailwind CSS", "Vite"]
   }
 ]
