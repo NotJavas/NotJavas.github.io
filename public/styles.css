@@ -815,6 +815,55 @@ main { position: relative; z-index: 1; }
   margin-top: 6px;
 }
 
+/* Paquete completo: destacado, centrado y anotado a mano tipo "gis" */
+.featured-combo-wrap {
+  position: relative;
+  max-width: 340px;
+  margin: 72px auto 130px;
+}
+.featured-combo-wrap .combo-card { width: 100%; }
+
+.combo-callout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  white-space: nowrap;
+  line-height: 1;
+}
+.combo-callout-left {
+  top: -92px;
+  left: -6px;
+  align-items: flex-start;
+  transform: rotate(-5deg);
+}
+.combo-callout-right {
+  bottom: -92px;
+  right: -6px;
+  align-items: flex-end;
+  transform: rotate(4deg);
+}
+.combo-arrow { width: 60px; height: 46px; flex-shrink: 0; }
+.combo-arrow-flip { transform: rotate(180deg); }
+
+@media (max-width: 720px) {
+  .featured-combo-wrap { margin: 56px auto 40px; }
+  .combo-callout {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 10px;
+  }
+  .combo-callout-right { margin: 10px 0 0; }
+  .combo-arrow { display: none; }
+}
+
 /* ---------- Contacto ---------- */
 .contact-box {
   max-width: 1100px;

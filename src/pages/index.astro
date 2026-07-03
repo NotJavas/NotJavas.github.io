@@ -202,10 +202,32 @@ import skills from '../data/skills.json';
       </div>
 
       <div class="combo-grid">
-        {combos.map(combo => (
+        {combos.filter(combo => !combo.featured).map(combo => (
           <ComboCard combo={combo} />
         ))}
       </div>
+
+      {combos.filter(combo => combo.featured).map(combo => (
+        <div class="featured-combo-wrap reveal">
+          <div class="combo-callout combo-callout-left">
+            <span>El mejor ahorro</span>
+            <svg class="combo-arrow" viewBox="0 0 100 80" aria-hidden="true">
+              <path d="M8 12 C 35 4, 65 20, 84 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M70 50 L86 58 L74 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <ComboCard combo={combo} />
+
+          <div class="combo-callout combo-callout-right">
+            <svg class="combo-arrow combo-arrow-flip" viewBox="0 0 100 80" aria-hidden="true">
+              <path d="M8 12 C 35 4, 65 20, 84 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M70 50 L86 58 L74 68" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Todo en un solo paquete</span>
+          </div>
+        </div>
+      ))}
 
       <p class="pricing-note reveal">
         Los precios finales dependen del tamaño y los detalles del proyecto — escríbeme y platicamos sin
