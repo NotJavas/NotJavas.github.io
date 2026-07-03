@@ -1065,7 +1065,7 @@ main { position: relative; z-index: 1; }
 .projects-grid > .reveal:nth-child(4), .skills-grid > .reveal:nth-child(4),
 .pricing-grid > .reveal:nth-child(4), .combo-grid > .reveal:nth-child(4) { transition-delay: .3s; }
 .projects-grid > .reveal:nth-child(5), .combo-grid > .reveal:nth-child(5) { transition-delay: .4s; }
-.projects-grid > .reveal:child(6) { transition-delay: .5s; }
+.projects-grid > .reveal:nth-child(6) { transition-delay: .5s; }
 
 /* ---------- Sprite y movimiento reducido ---------- */
 .sprite { display: none; }
