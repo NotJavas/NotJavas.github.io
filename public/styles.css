@@ -606,6 +606,11 @@ main { position: relative; z-index: 1; }
 .device.browser {
   border-radius: var(--radius-md);
 }
+.device svg, .device img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .browser-bar {
   display: flex;
   gap: 7px;
