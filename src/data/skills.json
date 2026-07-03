@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mobile",
+    "title": "Mobile",
+    "tags": ["Swift", "SwiftUI", "Kotlin", "Jetpack Compose", "MVVM"]
+  },
+  {
+    "id": "backend",
+    "title": "Backend",
+    "tags": ["C# / .NET", "Node.js", "Express", "Entity Framework", "REST APIs"]
+  },
+  {
+    "id": "frontend",
+    "title": "Web / Frontend",
+    "tags": ["React", "Blazor", "Vite", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    "id": "data",
+    "title": "Datos & Sistemas",
+    "tags": ["PostgreSQL", "SQL Server", "SQLite", "OAuth2 / JWT", "Octave / MATLAB"]
+  }
+]

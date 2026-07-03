@@ -1,0 +1,48 @@
+[
+  {
+    "id": "web-android",
+    "tags": ["Web", "+", "Android"],
+    "discount": "-10% del total",
+    "priceOld": "$29,000 MXN",
+    "priceNew": "$26,100 MXN",
+    "priceUSD": "~$1,460 USD",
+    "featured": false
+  },
+  {
+    "id": "web-ios",
+    "tags": ["Web", "+", "iOS"],
+    "discount": "-5% del total",
+    "priceOld": "$29,000 MXN",
+    "priceNew": "$27,550 MXN",
+    "priceUSD": "~$1,540 USD",
+    "featured": false
+  },
+  {
+    "id": "android-ios",
+    "tags": ["Android", "+", "iOS"],
+    "discount": "-8% del total",
+    "priceOld": "$50,000 MXN",
+    "priceNew": "$46,000 MXN",
+    "priceUSD": "~$2,580 USD",
+    "featured": false
+  },
+  {
+    "id": "web-system",
+    "tags": ["Web", "+", "Sistema"],
+    "discount": "-8% del total",
+    "priceOld": "$34,000 MXN",
+    "priceNew": "$31,280 MXN",
+    "priceUSD": "~$1,770 USD",
+    "featured": false
+  },
+  {
+    "id": "complete",
+    "tags": ["Web", "+", "Android", "+", "iOS", "+", "Sistema"],
+    "title": "Paquete completo",
+    "discount": "-15% del total",
+    "priceOld": "$84,000 MXN",
+    "priceNew": "$71,400 MXN",
+    "priceUSD": "~$4,010 USD",
+    "featured": true
+  }
+]

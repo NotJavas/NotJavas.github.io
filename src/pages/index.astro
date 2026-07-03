@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sprite from '../components/Sprite.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PricingCard from '../components/PricingCard.astro';
+import ComboCard from '../components/ComboCard.astro';
+import SkillCard from '../components/SkillCard.astro';
+
+import projects from '../data/projects.json';
+import pricing from '../data/pricing.json';
+import combos from '../data/combos.json';
+import skills from '../data/skills.json';
+---
+
+<Layout>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">Javier Sánchez<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#capturas">Capturas</a>
+        <a href="#pricing">Precios</a>
+        <a href="#contact" class="nav-cta">Contacto</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo día y modo noche">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow reveal">Disponible para proyectos freelance</p>
+        <h1 class="reveal">
+          Construyo productos digitales<br>
+          de punta a punta — <span class="grad-text">iOS, Android &amp; Web</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Soy <strong>Javier Sánchez</strong>, desarrollador full-stack y mobile en Querétaro, México.
+          Diseño e implemento apps y plataformas completas: desde la planeación, pasando por la
+          arquitectura y los servicios, hasta la última animación de la interfaz.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contact" class="btn btn-ghost">Contactar</a>
+        </div>
+        <div class="hero-social reveal">
+          <a href="https://github.com/NotJavas" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-gh"/></svg>
+          </a>
+          <a href="#contact" class="mailto" data-u="javaspowerful" data-d="gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-mail"/></svg>
+          </a>
+          <a href="https://wa.me/524425943653" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="7">7</span><span class="stat-label">Proyectos destacados</span></div>
+        <div class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label">Plataformas — iOS · Android · Web</span></div>
+        <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">100%</span><span class="stat-label">Full-stack, del diseño a producción</span></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Swift // Kotlin // C# / .NET // Node.js // SwiftUI // Jetpack Compose // Blazor // React // TypeScript // PostgreSQL // SQLite // OAuth2 // Entity Framework // Vite //&nbsp;</span>
+        <span>Swift // Kotlin // C# / .NET // Node.js // SwiftUI // Jetpack Compose // Blazor // React // TypeScript // PostgreSQL // SQLite // OAuth2 // Entity Framework // Vite //&nbsp;</span>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <p class="section-tag">Sobre mí</p>
+        <h2>Me gusta construir <span class="hl">proyectos completos</span> y bien hechos</h2>
+      </div>
+      <p class="about-text reveal">
+        Mi nombre es Javier Sánchez, estudio en la Universidad Autónoma de Querétaro y soy
+        desarrollador freelance. Soy yo, respondiendo mis propios correos y poniendo mi nombre en cada
+        proyecto que entrego. Hago esto porque quiero construirme una buena carrera con lo que sé
+        hacer, y porque me gusta cuando algo que programé genuinamente ayuda a alguien.
+      </p>
+      <p class="about-text reveal">
+        Trabajo en todas las capas de un producto: interfaces nativas en SwiftUI y Jetpack Compose,
+        backends en .NET y Node.js, bases de datos relacionales, etc.
+        Me interesa entender el problema completo y añadirle un plus a tu producto,
+        diseñando arquitecturas que se puedan mantener y crecer conforme a tus necesidades.
+      </p>
+      <div class="trust-row reveal">
+        <div class="trust-item">Trato directo conmigo, sin intermediarios</div>
+        <div class="trust-item">Código público y verificable</div>
+        <div class="trust-item">Respondo personalmente en menos de 24 horas</div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="section-head reveal">
+        <p class="section-tag">Stack &amp; herramientas</p>
+        <h2>Con qué <span class="hl">construyo</span></h2>
+      </div>
+      <div class="skills-grid reveal">
+        {skills.map(skill => (
+          <SkillCard skill={skill} />
+        ))}
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-head reveal">
+        <p class="section-tag">Proyectos destacados</p>
+        <h2>Trabajo que muestra <span class="hl">cómo pienso</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        {projects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+
+        <article class="project-card reveal cta-card">
+          <h3>¿Tu proyecto aquí?</h3>
+          <p>Cuéntame qué necesitas y lo convertimos en el siguiente proyecto en esta lista.</p>
+          <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary">Platicamos por WhatsApp</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="shots" id="capturas">
+      <div class="section-head reveal">
+        <p class="section-tag">En pantalla</p>
+        <h2>Así se ven <span class="hl">mis proyectos</span></h2>
+        <p class="pricing-sub">
+          Vistas ilustradas de las interfaces reales. ¿Quieres verlas funcionando? Pídeme un demo
+          en vivo — es gratis y sin compromiso.
+        </p>
+      </div>
+
+      <div class="shots-grid">
+
+        <figure class="shot reveal">
+          <div class="device phone">
+            <div class="device-notch"></div>
+            <svg viewBox="0 0 200 380" aria-label="Ilustración de la interfaz de MONEI"><use href="#wf-monei"/></svg>
+          </div>
+          <figcaption><strong>MONEI</strong> · Gestión de tarjetas y pagos — iOS</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="device browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <svg viewBox="0 0 320 210" aria-label="Ilustración del panel de administración de Defiants"><use href="#wf-defiants"/></svg>
+          </div>
+          <figcaption><strong>Defiants</strong> · Panel de administración de torneos — Web</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="device phone">
+            <div class="device-notch"></div>
+            <svg viewBox="0 0 200 380" aria-label="Ilustración del mapa de eventos de Destiny App"><use href="#wf-destiny"/></svg>
+          </div>
+          <figcaption><strong>Destiny</strong> · Eventos de la ciudad en un mapa — Android</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-head reveal">
+        <p class="section-tag">Precios</p>
+        <h2>¿<span class="hl">Cuánto cuesta</span> trabajar conmigo?</h2>
+        <p class="pricing-sub">
+          No necesitas saber de tecnología para trabajar conmigo — solo contarme qué problema quieres
+          resolver. Estos son puntos de partida; cada proyecto se cotiza según lo que realmente necesites.
+        </p>
+        <span class="first-time-badge">-20% en tu primer proyecto conmigo</span>
+      </div>
+
+      <div class="pricing-grid">
+        {pricing.map(pkg => (
+          <PricingCard pricing={pkg} />
+        ))}
+      </div>
+
+      <div class="section-head reveal combo-head">
+        <p class="section-tag">Combina y ahorra</p>
+        <h2>¿Necesitas más de uno? <span class="hl">Sale más barato</span> junto</h2>
+        <p class="pricing-sub">
+          Si un mismo proyecto combina varios de estos servicios, se comparte diseño, planeación y
+          configuración — y ese ahorro te lo paso a ti.
+        </p>
+      </div>
+
+      <div class="combo-grid">
+        {combos.map(combo => (
+          <ComboCard combo={combo} />
+        ))}
+      </div>
+
+      <p class="pricing-note reveal">
+        Los precios finales dependen del tamaño y los detalles del proyecto — escríbeme y platicamos sin
+        compromiso antes de cualquier cotización formal. El descuento de primer proyecto y los descuentos
+        por combinar servicios no se acumulan entre sí: aplica el que más te convenga.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-box reveal">
+        <h2>¿Tienes <span class="hl">un proyecto</span> en mente?</h2>
+        <p>Estoy disponible para trabajos freelance — apps móviles, plataformas web o sistemas a medida.
+           Escríbeme por donde te quede más cómodo.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp — 442 594 3653</a>
+          <a href="#contact" class="btn btn-ghost mailto" data-u="javaspowerful" data-d="gmail.com" data-show="1">Correo directo</a>
+          <a href="https://github.com/NotJavas" target="_blank" rel="noopener" class="btn btn-ghost">GitHub — @NotJavas</a>
+        </div>
+        <p class="contact-alt">¿Prefieres llamar? <a href="tel:+524425943653">442 594 3653</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por Javier Sánchez (Javas) · Querétaro, México · <a href="https://wa.me/524425943653">442 594 3653</a> · <a href="#contact" class="mailto" data-u="javaspowerful" data-d="gmail.com" data-show="1">correo</a></p>
+  </footer>
+
+  <Sprite />
+</Layout>

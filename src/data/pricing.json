@@ -1,0 +1,66 @@
+[
+  {
+    "id": "website",
+    "icon": "globe",
+    "title": "Página web para tu negocio",
+    "description": "Que te encuentren en Google, que se vea profesional y que la gente pueda contactarte sin complicaciones — tú solo mandas el contenido, yo me encargo del resto.",
+    "features": [
+      "Diseño a tu medida, se ve bien en cualquier celular",
+      "Formulario de contacto y botón de WhatsApp",
+      "Lista para usarse — hosting y dominio incluidos en la entrega"
+    ],
+    "priceOld": "$4,000 MXN",
+    "priceNew": "$3,200 MXN",
+    "priceUSD": "~$175 USD",
+    "subject": "Quiero una página web",
+    "body": "Hola Javier, cuéntame un poco de tu negocio y lo que necesitas..."
+  },
+  {
+    "id": "android",
+    "icon": "android",
+    "title": "App para Android",
+    "description": "Una app con tu marca que tus clientes se descargan y usan desde su celular Android — para pedidos, reservas, membresías o lo que tu negocio necesite.",
+    "features": [
+      "Diseño e identidad propios, no una plantilla genérica",
+      "Publicación en Google Play incluida",
+      "Lista para crecer con más funciones a futuro"
+    ],
+    "priceOld": "$25,000 MXN",
+    "priceNew": "$20,000 MXN",
+    "priceUSD": "~$1,120 USD",
+    "subject": "Quiero una app de Android",
+    "body": "Hola Javier, cuéntame un poco de tu negocio y lo que necesitas..."
+  },
+  {
+    "id": "ios",
+    "icon": "ios",
+    "title": "App para iOS",
+    "description": "Una app con tu marca que tus clientes se descargan y usan desde su iPhone — para pedidos, reservas, membresías o lo que tu negocio necesite.",
+    "features": [
+      "Diseño e identidad propios, no una plantilla genérica",
+      "Publicación en App Store incluida",
+      "Lista para crecer con más funciones a futuro"
+    ],
+    "priceOld": "$25,000 MXN",
+    "priceNew": "$20,000 MXN",
+    "priceUSD": "~$1,120 USD",
+    "subject": "Quiero una app de iOS",
+    "body": "Hola Javier, cuéntame un poco de tu negocio y lo que necesitas..."
+  },
+  {
+    "id": "system",
+    "icon": "system",
+    "title": "Sistema para organizar tu negocio",
+    "description": "Deja de llevar todo en Excel, WhatsApp o papel. Un solo lugar donde tú y tu equipo controlan pedidos, clientes, inventario o citas — con reportes que se generan solos.",
+    "features": [
+      "Panel de control para ti y tu equipo, con permisos por usuario",
+      "Toda tu información en un solo lugar, ordenada y respaldada",
+      "Reportes automáticos — sin armar tablas a mano cada mes"
+    ],
+    "priceOld": "$30,000 MXN",
+    "priceNew": "$24,000 MXN",
+    "priceUSD": "~$1,360 USD",
+    "subject": "Quiero un sistema a medida",
+    "body": "Hola Javier, cuéntame un poco de tu negocio y lo que necesitas..."
+  }
+]

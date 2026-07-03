@@ -1,0 +1,45 @@
+---
+interface Props {
+  pricing: {
+    id: string;
+    icon: string;
+    title: string;
+    description: string;
+    features: string[];
+    priceOld: string;
+    priceNew: string;
+    priceUSD: string;
+    subject: string;
+    body: string;
+  };
+}
+
+const { pricing } = Astro.props;
+
+const iconSVG = {
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9S9.5 5.5 12 3z"/>',
+  android: '<rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/>',
+  ios: '<rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M9 3.5h6"/>',
+  system: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/>',
+};
+---
+
+<article class="pricing-card reveal">
+  <div class="pricing-icon">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+      <Fragment set:html={iconSVG[pricing.icon as keyof typeof iconSVG]} />
+    </svg>
+  </div>
+  <h3>{pricing.title}</h3>
+  <p>{pricing.description}</p>
+  <ul class="features">
+    {pricing.features.map(feature => (
+      <li>{feature}</li>
+    ))}
+  </ul>
+  <div class="price">
+    <span class="price-old">{pricing.priceOld}</span>
+    <div>Tu primer proyecto: <strong>{pricing.priceNew}</strong><span class="price-usd">({pricing.priceUSD})</span></div>
+  </div>
+  <a href="#contact" class="btn btn-ghost pricing-cta mailto" data-u="javaspowerful" data-d="gmail.com" data-s={pricing.subject} data-b={pricing.body}>Pedir cotización</a>
+</article>

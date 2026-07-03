@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <!-- Gradiente de fondo -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0b08;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1714;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb03a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff3d26;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decoración: círculos sutiles -->
+  <circle cx="100" cy="80" r="80" fill="#ffb03a" opacity="0.1"/>
+  <circle cx="1100" cy="550" r="120" fill="#ffb03a" opacity="0.08"/>
+
+  <!-- Logo JAVAS -->
+  <text x="600" y="160" font-family="Space Grotesk, sans-serif" font-size="120" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="8">
+    JAVAS
+  </text>
+
+  <!-- Punto/dot -->
+  <circle cx="665" cy="135" r="18" fill="#ffb03a"/>
+
+  <!-- Propuesta de valor principal -->
+  <text x="600" y="280" font-family="Space Grotesk, sans-serif" font-size="48" font-weight="600" fill="#ffffff" text-anchor="middle">
+    Full-Stack &amp; Mobile Developer
+  </text>
+
+  <!-- Subtítulo -->
+  <text x="600" y="350" font-family="Space Grotesk, sans-serif" font-size="32" fill="#aaa9a4" text-anchor="middle">
+    iOS · Android · Web · Backend
+  </text>
+
+  <!-- Call to action -->
+  <rect x="350" y="420" width="500" height="80" fill="none" stroke="#ffb03a" stroke-width="3" rx="8"/>
+  <text x="600" y="475" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#ffb03a" text-anchor="middle">
+    Construyo productos de punta a punta
+  </text>
+
+  <!-- Footer info -->
+  <text x="600" y="580" font-family="JetBrains Mono, monospace" font-size="18" fill="#666" text-anchor="middle">
+    Ubicado en Querétaro, México • Disponible para proyectos
+  </text>
+</svg>
