@@ -28,6 +28,14 @@
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
+
+  /* Capa Bubbly: bordes gruesos, arcilla 3D y física de resorte */
+  --bw: 2.5px;
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --clay-hi: rgba(255, 255, 255, 0.07);
+  --clay-lo: rgba(0, 0, 0, 0.3);
+  --edge: color-mix(in srgb, var(--accent) 55%, #03182e);
+  --edge-soft: color-mix(in srgb, var(--border-strong) 80%, transparent);
 }
 
 [data-theme="light"] {
@@ -48,6 +56,11 @@
   --glow-2: rgba(0, 135, 101, 0.09);
   --nav-bg: rgba(243, 245, 248, 0.7);
   --shadow: rgba(60, 80, 110, 0.12);
+
+  --clay-hi: rgba(255, 255, 255, 0.9);
+  --clay-lo: rgba(30, 50, 80, 0.12);
+  --edge: color-mix(in srgb, var(--accent) 65%, #032c5e);
+  --edge-soft: color-mix(in srgb, var(--border-strong) 80%, transparent);
 }
 
 * { box-sizing: border-box; }
@@ -152,7 +165,7 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0; letter-spacing: -0.025em; }
 .nav-links a:hover { color: var(--text); }
 
 .nav-cta {
-  border: 1px solid var(--border-strong);
+  border: 2px solid var(--border-strong);
   padding: 8px 18px;
   color: var(--text) !important;
   border-radius: var(--radius-full);
@@ -166,7 +179,7 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0; letter-spacing: -0.025em; }
   width: 40px;
   height: 40px;
   background: var(--surface);
-  border: 1px solid var(--border-strong);
+  border: 2px solid var(--border-strong);
   color: var(--text);
   cursor: pointer;
   border-radius: var(--radius-full);
@@ -213,7 +226,7 @@ main { position: relative; z-index: 1; }
   font-size: 0.9rem;
   color: var(--accent);
   background-color: color-mix(in srgb, var(--accent) 15%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border: 2px solid color-mix(in srgb, var(--accent) 40%, transparent);
   display: inline-block;
   padding: 8px 18px;
   margin-bottom: 24px;
@@ -242,34 +255,57 @@ main { position: relative; z-index: 1; }
   margin-bottom: 32px;
 }
 
+/* Botones jelly: borde inferior sólido que se "hunde" al presionar (ref. Duolingo) */
 .btn {
   padding: 14px 28px;
   font-size: 1rem;
-  font-weight: 600;
-  transition: transform .2s, box-shadow .2s;
+  font-weight: 700;
+  transition: transform .18s var(--spring), box-shadow .18s ease, background-position .35s ease, border-color .2s;
   display: inline-flex;
   align-items: center;
   border-radius: var(--radius-full);
-  border: 1px solid transparent;
+  border: var(--bw) solid transparent;
 }
 
 .btn-primary {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   background-size: 180% 100%;
   color: var(--on-accent);
-  transition: transform .2s, box-shadow .2s, background-position .35s ease;
+  box-shadow:
+    0 5px 0 var(--edge),
+    inset 0 2px 1px rgba(255, 255, 255, 0.35);
 }
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--accent) 40%, transparent);
+  transform: translateY(-2px);
+  box-shadow:
+    0 7px 0 var(--edge),
+    0 12px 26px color-mix(in srgb, var(--accent) 35%, transparent),
+    inset 0 2px 1px rgba(255, 255, 255, 0.35);
   background-position: 100% 0;
+}
+.btn-primary:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 1px 0 var(--edge),
+    inset 0 2px 1px rgba(255, 255, 255, 0.35);
 }
 
 .btn-ghost {
   border-color: var(--border-strong);
   color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 4px 0 var(--edge-soft);
 }
-.btn-ghost:hover { border-color: var(--accent); background-color: color-mix(in srgb, var(--accent) 10%, transparent); transform: translateY(-3px); }
+.btn-ghost:hover {
+  border-color: var(--accent);
+  background-color: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--edge-soft);
+}
+.btn-ghost:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--edge-soft);
+}
 
 .hero-social { display: flex; gap: 22px; justify-content: center; }
 .hero-social a {
@@ -340,7 +376,7 @@ main { position: relative; z-index: 1; }
   font-size: 0.85rem;
   color: var(--text-dim);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   padding: 8px 16px;
   display: inline-flex;
   align-items: center;
@@ -368,7 +404,7 @@ main { position: relative; z-index: 1; }
 
 .skill-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   padding: 28px;
   border-radius: var(--radius-lg);
   transition: background-color .3s ease, transform .2s, box-shadow .2s;
@@ -402,7 +438,7 @@ main { position: relative; z-index: 1; }
 
 .project-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -470,7 +506,7 @@ main { position: relative; z-index: 1; }
 .badge-private {
   background: var(--surface-2);
   color: var(--text-dim);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
 }
 
 .project-card h3 { font-size: 1.3rem; }
@@ -484,7 +520,7 @@ main { position: relative; z-index: 1; }
   padding: 16px;
   margin-top: 8px;
   background: var(--surface-2);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-md);
   transition: background-color .3s ease;
 }
@@ -636,7 +672,7 @@ main { position: relative; z-index: 1; }
 
 .pricing-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -718,7 +754,7 @@ main { position: relative; z-index: 1; }
 
 .combo-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -903,3 +939,158 @@ main { position: relative; z-index: 1; }
   .pricing-grid { grid-template-columns: 1fr; }
   .combo-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   CAPA BUBBLY
+   Bordes gruesos + arcilla semi-3D (claymorphism: sombra exterior
+   suave, inset oscuro abajo, inset claro arriba) + brillos de
+   vidrio + burbujas flotantes + física de resorte en los hovers.
+   ============================================================ */
+
+/* Bordes gruesos en todos los contenedores y chips */
+.nav-cta, .theme-toggle, .eyebrow, .trust-item,
+.skill-card, .project-card, .case, .pricing-card, .combo-card,
+.contact-box, .badge-link, .badge-private, .combo-discount,
+.tags span, .browser-bar {
+  border-width: var(--bw);
+}
+
+/* Arcilla 3D: tarjetas infladas como plastilina */
+.skill-card, .project-card, .pricing-card, .combo-card, .contact-box {
+  box-shadow:
+    0 10px 24px var(--shadow),
+    inset 0 -8px 14px var(--clay-lo),
+    inset 0 4px 8px var(--clay-hi);
+}
+.skill-card:hover, .project-card:hover, .pricing-card:hover, .combo-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 18px 40px var(--shadow),
+    inset 0 -8px 14px var(--clay-lo),
+    inset 0 4px 8px var(--clay-hi);
+}
+.skill-card, .project-card, .pricing-card, .combo-card {
+  transition:
+    transform .3s var(--spring),
+    box-shadow .25s ease,
+    border-color .25s ease,
+    background-color .3s ease;
+}
+
+.case {
+  box-shadow:
+    inset 0 -5px 10px var(--clay-lo),
+    inset 0 3px 6px var(--clay-hi);
+}
+
+/* Reflejo de vidrio en los dispositivos de la sección Capturas */
+.device { position: relative; }
+.device::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.09) 47%,
+    rgba(255, 255, 255, 0.16) 50%,
+    transparent 58%);
+}
+
+/* Íconos y badges con volumen */
+.pricing-icon {
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.28),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.18);
+}
+.first-time-badge {
+  box-shadow:
+    0 4px 0 var(--edge),
+    inset 0 2px 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Burbujas flotantes de fondo */
+.bg-glow::before,
+.bg-glow::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(46px);
+  opacity: 0.8;
+}
+.bg-glow::before {
+  width: 340px;
+  height: 340px;
+  left: 6%;
+  top: 34%;
+  background: var(--glow-1);
+  animation: floatA 16s ease-in-out infinite alternate;
+}
+.bg-glow::after {
+  width: 260px;
+  height: 260px;
+  right: 10%;
+  top: 6%;
+  background: var(--glow-2);
+  animation: floatB 21s ease-in-out infinite alternate;
+}
+@keyframes floatA {
+  to { transform: translate(40px, -34px) scale(1.08); }
+}
+@keyframes floatB {
+  to { transform: translate(-30px, 42px) scale(0.92); }
+}
+
+/* Física de resorte: micro-rebotes juguetones */
+.theme-toggle { transition: transform .25s var(--spring), border-color .2s, background-color .3s; }
+.theme-toggle:hover { transform: scale(1.12) rotate(14deg); border-color: var(--accent); }
+
+.trust-item { transition: transform .25s var(--spring), border-color .2s, background-color .3s; }
+.trust-item:hover { transform: rotate(-1.5deg) scale(1.05); border-color: var(--accent-2); }
+
+.tags span { transition: transform .2s var(--spring), border-color .2s, background-color .3s; }
+.tags span:hover { transform: scale(1.09); border-color: var(--accent); }
+
+.hero-social a { transition: transform .25s var(--spring), color .2s; }
+.hero-social a:hover { transform: translateY(-3px) scale(1.15); }
+
+.badge-link { transition: transform .2s var(--spring), background .2s; }
+.badge-link:hover { transform: scale(1.06); }
+
+/* Palabra clave estilo marcatextos redondeado */
+.hl {
+  color: var(--accent);
+  background: linear-gradient(120deg,
+    color-mix(in srgb, var(--accent) 15%, transparent),
+    color-mix(in srgb, var(--accent-2) 15%, transparent));
+  border-radius: 0.5em;
+  padding: 0 0.24em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Punto pulsante en el aviso de disponibilidad */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.eyebrow::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.78); }
+}
+
+/* Entrada con rebote */
+.reveal {
+  transform: translateY(20px) scale(0.97);
+  transition: opacity .5s ease, transform .55s var(--spring);
+}
+.reveal.in { transform: none; }
