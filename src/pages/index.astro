@@ -5,11 +5,13 @@ import ProjectCard from '../components/ProjectCard.astro';
 import PricingCard from '../components/PricingCard.astro';
 import ComboCard from '../components/ComboCard.astro';
 import SkillCard from '../components/SkillCard.astro';
+import SoftSkillCard from '../components/SoftSkillCard.astro';
 
 import projects from '../data/projects.json';
 import pricing from '../data/pricing.json';
 import combos from '../data/combos.json';
 import skills from '../data/skills.json';
+import softSkills from '../data/softskills.json';
 ---
 
 <Layout>
@@ -104,13 +106,28 @@ import skills from '../data/skills.json';
 
     <section class="skills" id="skills">
       <div class="section-head reveal">
-        <p class="section-tag" data-en="Stack &amp; tools">Stack &amp; herramientas</p>
-        <h2><span data-en="What I">Con qué</span> <span class="hl" data-en="build with">construyo</span></h2>
+        <p class="section-tag" data-en="Stack &amp; how I work">Stack &amp; forma de trabajar</p>
+        <h2><span data-en="What I">Con qué</span> <span class="hl" data-en="build with">construyo</span> <span data-en="— and how I work">— y cómo trabajo</span></h2>
       </div>
-      <div class="skills-grid reveal">
-        {skills.map(skill => (
-          <SkillCard skill={skill} />
-        ))}
+
+      <div class="skills-columns">
+        <div class="skills-col">
+          <h3 class="skills-col-title" data-en="Tech stack">Stack técnico</h3>
+          <div class="skills-grid reveal">
+            {skills.map(skill => (
+              <SkillCard skill={skill} />
+            ))}
+          </div>
+        </div>
+
+        <div class="skills-col">
+          <h3 class="skills-col-title" data-en="As a person">Como persona</h3>
+          <div class="softskills-grid reveal">
+            {softSkills.map(skill => (
+              <SoftSkillCard skill={skill} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -260,26 +277,6 @@ import skills from '../data/skills.json';
         <div class="shot-group accent-2 reverse reveal">
           <div class="shot-group-label">
             <span class="shot-group-num">06</span>
-            <h3>Titanic</h3>
-            <p data-en="Survival prediction — Machine Learning">Predicción de supervivencia — Machine Learning</p>
-          </div>
-          <div class="shot-group-pieces">
-            <figure class="shot-piece piece-wide">
-              <div class="device browser">
-                <div class="browser-bar"><span></span><span></span><span></span></div>
-                <img src="/img/titanic-eda.png" alt="Captura real del análisis exploratorio y modelos del proyecto Titanic" loading="lazy" />
-              </div>
-            </figure>
-            <figure class="shot-piece shot-chip">
-              <strong>~83%</strong>
-              <span data-en="Accuracy — SVM, 5 models compared">Accuracy — SVM, 5 modelos comparados</span>
-            </figure>
-          </div>
-        </div>
-
-        <div class="shot-group reveal">
-          <div class="shot-group-label">
-            <span class="shot-group-num">07</span>
             <h3>Melts</h3>
             <p data-en="Landing page with original branding — Web">Landing page con marca propia — Web</p>
           </div>
@@ -293,6 +290,26 @@ import skills from '../data/skills.json';
             <figure class="shot-piece shot-chip">
               <strong data-en="100% original">100% propia</strong>
               <span data-en="Brand, tone of voice and copywriting">Marca, tono de voz y copywriting</span>
+            </figure>
+          </div>
+        </div>
+
+        <div class="shot-group reveal">
+          <div class="shot-group-label">
+            <span class="shot-group-num">07</span>
+            <h3>Titanic</h3>
+            <p data-en="Survival prediction — Machine Learning">Predicción de supervivencia — Machine Learning</p>
+          </div>
+          <div class="shot-group-pieces">
+            <figure class="shot-piece piece-wide">
+              <div class="device browser">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <img src="/img/titanic-eda.png" alt="Captura real del análisis exploratorio y modelos del proyecto Titanic" loading="lazy" />
+              </div>
+            </figure>
+            <figure class="shot-piece shot-chip">
+              <strong>~83%</strong>
+              <span data-en="Accuracy — SVM, 5 models compared">Accuracy — SVM, 5 modelos comparados</span>
             </figure>
           </div>
         </div>

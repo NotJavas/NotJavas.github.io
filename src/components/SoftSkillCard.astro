@@ -1,0 +1,22 @@
+---
+interface Props {
+  skill: {
+    id: string;
+    icon: string;
+    title: string;
+    title_en?: string;
+    description: string;
+    description_en?: string;
+  };
+}
+
+const { skill } = Astro.props;
+---
+
+<div class="softskill-card">
+  <div class="softskill-icon">
+    <svg viewBox="0 0 24 24"><use href={`#${skill.icon}`} /></svg>
+  </div>
+  <h4 data-en={skill.title_en}>{skill.title}</h4>
+  <p data-en={skill.description_en}>{skill.description}</p>
+</div>

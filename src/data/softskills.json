@@ -1,0 +1,26 @@
+[
+  {
+    "id": "communication",
+    "icon": "icon-chat",
+    "title": "Comunicación clara y honesta",
+    "title_en": "Clear, honest communication",
+    "description": "Te explico las cosas sin tecnicismos y aviso a tiempo si algo se va a retrasar. Nada de sorpresas de último momento.",
+    "description_en": "I explain things without jargon and give you a heads-up if something's going to take longer. No last-minute surprises."
+  },
+  {
+    "id": "commitment",
+    "icon": "icon-shield",
+    "title": "Compromiso y responsabilidad",
+    "title_en": "Commitment and accountability",
+    "description": "Trato cada proyecto como si fuera mío. Cuido los detalles y cumplo lo que digo, aunque nadie más lo esté revisando.",
+    "description_en": "I treat every project like it's my own. I sweat the details and follow through on what I say, even when no one's checking."
+  },
+  {
+    "id": "curiosity",
+    "icon": "icon-bulb",
+    "title": "Curiosidad y gusto genuino por resolver problemas",
+    "title_en": "Curiosity and a real love for solving problems",
+    "description": "No lo hago solo por el pago — me emociona entender el problema real detrás de tu idea y encontrarle una solución que de verdad sirva.",
+    "description_en": "I don't just do it for the paycheck — I get excited about understanding the real problem behind your idea and finding a solution that actually works."
+  }
+]
