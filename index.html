@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
 <title>Javier Sánchez (Javas) — Desarrollador Full-Stack &amp; Mobile</title>
 <meta name="description" content="Portafolio de Javier Sánchez (Javas): desarrollador Full-Stack, iOS y Android en Querétaro, México. Proyectos en Swift, Kotlin, .NET, Node.js y más.">
 <link rel="icon" href="data:,">
@@ -52,32 +53,39 @@
       </p>
       <div class="hero-actions reveal">
         <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-        <a href="mailto:javaspowerful@gmail.com" class="btn btn-ghost">Contactar</a>
+        <a href="#contact" class="btn btn-ghost">Contactar</a>
       </div>
       <div class="hero-social reveal">
         <a href="https://github.com/NotJavas" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-gh"/></svg>
         </a>
-        <a href="mailto:javaspowerful@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>
+        <a class="mailto" data-u="javaspowerful" data-d="gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-mail"/></svg>
         </a>
         <a href="https://wa.me/524425943653" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L4 20l.9-4.5A8.5 8.5 0 1 1 21 11.5z"/><path d="M9.5 9.5c.5 2.5 2.5 4.5 5 5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-5.5-3.5-6.5-6.5-.5-1.5 0-2.5 1.5-3l1 2-1 1.5z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
         </a>
       </div>
     </div>
 
     <div class="hero-stats reveal">
-      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Proyectos destacados</span></div>
-      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Plataformas — iOS · Android · Web</span></div>
-      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Full-stack, del diseño a producción</span></div>
+      <div class="stat"><span class="stat-num" data-count="7">7</span><span class="stat-label">Proyectos destacados</span></div>
+      <div class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label">Plataformas — iOS · Android · Web</span></div>
+      <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">100%</span><span class="stat-label">Full-stack, del diseño a producción</span></div>
     </div>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Swift // Kotlin // C# / .NET // Node.js // SwiftUI // Jetpack Compose // Blazor // React // TypeScript // PostgreSQL // SQLite // OAuth2 // Entity Framework // Vite //&nbsp;</span>
+      <span>Swift // Kotlin // C# / .NET // Node.js // SwiftUI // Jetpack Compose // Blazor // React // TypeScript // PostgreSQL // SQLite // OAuth2 // Entity Framework // Vite //&nbsp;</span>
+    </div>
+  </div>
 
   <section class="about" id="about">
     <div class="section-head reveal">
       <p class="section-tag">Sobre mí</p>
-      <h2>Me gusta construir cosas completas, no solo prototipos</h2>
+      <h2>Me gusta construir <span class="hl">cosas completas</span>, no solo prototipos</h2>
     </div>
     <p class="about-text reveal">
       Trabajo en todas las capas de un producto: interfaces nativas en SwiftUI y Jetpack Compose,
@@ -102,7 +110,7 @@
   <section class="skills" id="skills">
     <div class="section-head reveal">
       <p class="section-tag">Stack &amp; herramientas</p>
-      <h2>Con qué construyo</h2>
+      <h2>Con qué <span class="hl">construyo</span></h2>
     </div>
     <div class="skills-grid reveal">
       <div class="skill-card">
@@ -135,7 +143,7 @@
   <section class="projects" id="projects">
     <div class="section-head reveal">
       <p class="section-tag">Proyectos destacados</p>
-      <h2>Trabajo que muestra cómo pienso</h2>
+      <h2>Trabajo que muestra <span class="hl">cómo pienso</span></h2>
     </div>
 
     <div class="projects-grid">
@@ -306,7 +314,7 @@
   <section class="shots" id="capturas">
     <div class="section-head reveal">
       <p class="section-tag">En pantalla</p>
-      <h2>Así se ven mis proyectos</h2>
+      <h2>Así se ven <span class="hl">mis proyectos</span></h2>
       <p class="pricing-sub">
         Vistas ilustradas de las interfaces reales. ¿Quieres verlas funcionando? Pídeme un demo
         en vivo — es gratis y sin compromiso.
@@ -318,19 +326,7 @@
       <figure class="shot reveal">
         <div class="device phone">
           <div class="device-notch"></div>
-          <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración de la interfaz de MONEI">
-            <rect x="16" y="28" width="110" height="14" rx="4" class="w-strong"/>
-            <rect x="16" y="56" width="168" height="96" rx="12" class="w-accent"/>
-            <rect x="30" y="72" width="60" height="9" rx="3" class="w-on-accent"/>
-            <rect x="30" y="120" width="90" height="12" rx="3" class="w-on-accent"/>
-            <rect x="146" y="118" width="24" height="16" rx="4" class="w-on-accent"/>
-            <rect x="16" y="170" width="80" height="42" rx="10" class="w-soft"/>
-            <rect x="104" y="170" width="80" height="42" rx="10" class="w-soft"/>
-            <rect x="16" y="230" width="100" height="10" rx="3" class="w-strong"/>
-            <rect x="16" y="252" width="168" height="30" rx="8" class="w-soft"/>
-            <rect x="16" y="290" width="168" height="30" rx="8" class="w-soft"/>
-            <rect x="16" y="328" width="168" height="30" rx="8" class="w-soft"/>
-          </svg>
+          <svg viewBox="0 0 200 380" aria-label="Ilustración de la interfaz de MONEI"><use href="#wf-monei"/></svg>
         </div>
         <figcaption><strong>MONEI</strong> · Gestión de tarjetas y pagos — iOS</figcaption>
       </figure>
@@ -338,20 +334,7 @@
       <figure class="shot reveal">
         <div class="device browser">
           <div class="browser-bar"><span></span><span></span><span></span></div>
-          <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del panel de administración de Defiants">
-            <rect x="0" y="0" width="70" height="210" class="w-soft"/>
-            <rect x="12" y="16" width="46" height="9" rx="3" class="w-accent"/>
-            <rect x="12" y="40" width="46" height="7" rx="3" class="w-strong"/>
-            <rect x="12" y="58" width="46" height="7" rx="3" class="w-strong"/>
-            <rect x="12" y="76" width="46" height="7" rx="3" class="w-strong"/>
-            <rect x="86" y="16" width="120" height="12" rx="4" class="w-strong"/>
-            <rect x="86" y="44" width="66" height="44" rx="8" class="w-soft"/>
-            <rect x="160" y="44" width="66" height="44" rx="8" class="w-soft"/>
-            <rect x="234" y="44" width="66" height="44" rx="8" class="w-accent"/>
-            <rect x="86" y="104" width="214" height="22" rx="6" class="w-soft"/>
-            <rect x="86" y="134" width="214" height="22" rx="6" class="w-soft"/>
-            <rect x="86" y="164" width="214" height="22" rx="6" class="w-soft"/>
-          </svg>
+          <svg viewBox="0 0 320 210" aria-label="Ilustración del panel de administración de Defiants"><use href="#wf-defiants"/></svg>
         </div>
         <figcaption><strong>Defiants</strong> · Panel de administración de torneos — Web</figcaption>
       </figure>
@@ -359,16 +342,7 @@
       <figure class="shot reveal">
         <div class="device phone">
           <div class="device-notch"></div>
-          <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustración del mapa de eventos de Destiny App">
-            <rect x="16" y="28" width="168" height="200" rx="12" class="w-soft"/>
-            <circle cx="70" cy="90" r="8" class="w-accent"/>
-            <circle cx="130" cy="130" r="8" class="w-accent"/>
-            <circle cx="90" cy="180" r="8" class="w-accent"/>
-            <path d="M30 210 Q 80 150 120 170 T 180 110" fill="none" class="w-line"/>
-            <rect x="16" y="244" width="110" height="12" rx="4" class="w-strong"/>
-            <rect x="16" y="268" width="168" height="42" rx="10" class="w-soft"/>
-            <rect x="16" y="318" width="168" height="42" rx="10" class="w-soft"/>
-          </svg>
+          <svg viewBox="0 0 200 380" aria-label="Ilustración del mapa de eventos de Destiny App"><use href="#wf-destiny"/></svg>
         </div>
         <figcaption><strong>Destiny</strong> · Eventos de la ciudad en un mapa — Android</figcaption>
       </figure>
@@ -379,7 +353,7 @@
   <section class="pricing" id="pricing">
     <div class="section-head reveal">
       <p class="section-tag">Precios</p>
-      <h2>¿Cuánto cuesta trabajar conmigo?</h2>
+      <h2>¿<span class="hl">Cuánto cuesta</span> trabajar conmigo?</h2>
       <p class="pricing-sub">
         No necesitas saber de tecnología para trabajar conmigo — solo contarme qué problema quieres
         resolver. Estos son puntos de partida; cada proyecto se cotiza según lo que realmente necesites.
@@ -405,7 +379,7 @@
           <span class="price-old">$4,000 MXN</span>
           <div>Tu primer proyecto: <strong>$3,200 MXN</strong><span class="price-usd">(~$175 USD)</span></div>
         </div>
-        <a href="mailto:javaspowerful@gmail.com?subject=Quiero%20una%20p%C3%A1gina%20web&body=Hola%20Javier%2C%20cu%C3%A9ntame%20un%20poco%20de%20tu%20negocio%20y%20lo%20que%20necesitas..." class="btn btn-ghost pricing-cta">Pedir cotización</a>
+        <a class="btn btn-ghost pricing-cta mailto" data-u="javaspowerful" data-d="gmail.com" data-s="Quiero una página web">Pedir cotización</a>
       </article>
 
       <article class="pricing-card reveal">
@@ -424,7 +398,7 @@
           <span class="price-old">$25,000 MXN</span>
           <div>Tu primer proyecto: <strong>$20,000 MXN</strong><span class="price-usd">(~$1,120 USD)</span></div>
         </div>
-        <a href="mailto:javaspowerful@gmail.com?subject=Quiero%20una%20app%20de%20Android&body=Hola%20Javier%2C%20cu%C3%A9ntame%20un%20poco%20de%20tu%20negocio%20y%20lo%20que%20necesitas..." class="btn btn-ghost pricing-cta">Pedir cotización</a>
+        <a class="btn btn-ghost pricing-cta mailto" data-u="javaspowerful" data-d="gmail.com" data-s="Quiero una app de Android">Pedir cotización</a>
       </article>
 
       <article class="pricing-card reveal">
@@ -443,7 +417,7 @@
           <span class="price-old">$25,000 MXN</span>
           <div>Tu primer proyecto: <strong>$20,000 MXN</strong><span class="price-usd">(~$1,120 USD)</span></div>
         </div>
-        <a href="mailto:javaspowerful@gmail.com?subject=Quiero%20una%20app%20de%20iOS&body=Hola%20Javier%2C%20cu%C3%A9ntame%20un%20poco%20de%20tu%20negocio%20y%20lo%20que%20necesitas..." class="btn btn-ghost pricing-cta">Pedir cotización</a>
+        <a class="btn btn-ghost pricing-cta mailto" data-u="javaspowerful" data-d="gmail.com" data-s="Quiero una app de iOS">Pedir cotización</a>
       </article>
 
       <article class="pricing-card reveal">
@@ -462,14 +436,14 @@
           <span class="price-old">$30,000 MXN</span>
           <div>Tu primer proyecto: <strong>$24,000 MXN</strong><span class="price-usd">(~$1,360 USD)</span></div>
         </div>
-        <a href="mailto:javaspowerful@gmail.com?subject=Quiero%20un%20sistema%20a%20medida&body=Hola%20Javier%2C%20cu%C3%A9ntame%20un%20poco%20de%20tu%20negocio%20y%20lo%20que%20necesitas..." class="btn btn-ghost pricing-cta">Pedir cotización</a>
+        <a class="btn btn-ghost pricing-cta mailto" data-u="javaspowerful" data-d="gmail.com" data-s="Quiero un sistema a medida">Pedir cotización</a>
       </article>
 
     </div>
 
     <div class="section-head reveal combo-head">
       <p class="section-tag">Combina y ahorra</p>
-      <h2>¿Necesitas más de uno? Sale más barato junto</h2>
+      <h2>¿Necesitas más de uno? <span class="hl">Sale más barato</span> junto</h2>
       <p class="pricing-sub">
         Si un mismo proyecto combina varios de estos servicios, se comparte diseño, planeación y
         configuración — y ese ahorro te lo paso a ti.
@@ -533,12 +507,12 @@
 
   <section class="contact" id="contact">
     <div class="contact-box reveal">
-      <h2>¿Tienes un proyecto en mente?</h2>
+      <h2>¿Tienes <span class="hl">un proyecto</span> en mente?</h2>
       <p>Estoy disponible para trabajos freelance — apps móviles, plataformas web o sistemas a medida.
          Escríbeme por donde te quede más cómodo.</p>
       <div class="hero-actions">
         <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp — 442 594 3653</a>
-        <a href="mailto:javaspowerful@gmail.com" class="btn btn-ghost">javaspowerful@gmail.com</a>
+        <a class="btn btn-ghost mailto" data-u="javaspowerful" data-d="gmail.com" data-show="1">Correo directo</a>
         <a href="https://github.com/NotJavas" target="_blank" rel="noopener" class="btn btn-ghost">GitHub — @NotJavas</a>
       </div>
       <p class="contact-alt">¿Prefieres llamar? <a href="tel:+524425943653">442 594 3653</a></p>
@@ -548,8 +522,57 @@
 </main>
 
 <footer class="footer">
-  <p>Hecho por Javier Sánchez (Javas) · Querétaro, México · <a href="https://wa.me/524425943653">442 594 3653</a> · <a href="mailto:javaspowerful@gmail.com">javaspowerful@gmail.com</a></p>
+  <p>Hecho por Javier Sánchez (Javas) · Querétaro, México · <a href="https://wa.me/524425943653">442 594 3653</a> · <a class="mailto" data-u="javaspowerful" data-d="gmail.com" data-show="1">correo</a></p>
 </footer>
+
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="icon-gh" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+  </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></g>
+  </symbol>
+  <symbol id="icon-wa" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L4 20l.9-4.5A8.5 8.5 0 1 1 21 11.5z"/><path d="M9.5 9.5c.5 2.5 2.5 4.5 5 5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-5.5-3.5-6.5-6.5-.5-1.5 0-2.5 1.5-3l1 2-1 1.5z"/></g>
+  </symbol>
+  <symbol id="wf-monei" viewBox="0 0 200 380">
+    <rect x="16" y="28" width="110" height="14" rx="4" class="w-strong"/>
+    <rect x="16" y="56" width="168" height="96" rx="12" class="w-accent"/>
+    <rect x="30" y="72" width="60" height="9" rx="3" class="w-on-accent"/>
+    <rect x="30" y="120" width="90" height="12" rx="3" class="w-on-accent"/>
+    <rect x="146" y="118" width="24" height="16" rx="4" class="w-on-accent"/>
+    <rect x="16" y="170" width="80" height="42" rx="10" class="w-soft"/>
+    <rect x="104" y="170" width="80" height="42" rx="10" class="w-soft"/>
+    <rect x="16" y="230" width="100" height="10" rx="3" class="w-strong"/>
+    <rect x="16" y="252" width="168" height="30" rx="8" class="w-soft"/>
+    <rect x="16" y="290" width="168" height="30" rx="8" class="w-soft"/>
+    <rect x="16" y="328" width="168" height="30" rx="8" class="w-soft"/>
+  </symbol>
+  <symbol id="wf-defiants" viewBox="0 0 320 210">
+    <rect x="0" y="0" width="70" height="210" class="w-soft"/>
+    <rect x="12" y="16" width="46" height="9" rx="3" class="w-accent"/>
+    <rect x="12" y="40" width="46" height="7" rx="3" class="w-strong"/>
+    <rect x="12" y="58" width="46" height="7" rx="3" class="w-strong"/>
+    <rect x="12" y="76" width="46" height="7" rx="3" class="w-strong"/>
+    <rect x="86" y="16" width="120" height="12" rx="4" class="w-strong"/>
+    <rect x="86" y="44" width="66" height="44" rx="8" class="w-soft"/>
+    <rect x="160" y="44" width="66" height="44" rx="8" class="w-soft"/>
+    <rect x="234" y="44" width="66" height="44" rx="8" class="w-accent"/>
+    <rect x="86" y="104" width="214" height="22" rx="6" class="w-soft"/>
+    <rect x="86" y="134" width="214" height="22" rx="6" class="w-soft"/>
+    <rect x="86" y="164" width="214" height="22" rx="6" class="w-soft"/>
+  </symbol>
+  <symbol id="wf-destiny" viewBox="0 0 200 380">
+    <rect x="16" y="28" width="168" height="200" rx="12" class="w-soft"/>
+    <circle cx="70" cy="90" r="8" class="w-accent"/>
+    <circle cx="130" cy="130" r="8" class="w-accent"/>
+    <circle cx="90" cy="180" r="8" class="w-accent"/>
+    <path d="M30 210 Q 80 150 120 170 T 180 110" fill="none" class="w-line"/>
+    <rect x="16" y="244" width="110" height="12" rx="4" class="w-strong"/>
+    <rect x="16" y="268" width="168" height="42" rx="10" class="w-soft"/>
+    <rect x="16" y="318" width="168" height="42" rx="10" class="w-soft"/>
+  </symbol>
+</svg>
 
 <script src="script.js"></script>
 </body>
