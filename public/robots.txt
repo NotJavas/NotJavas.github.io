@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://notjavas.github.io/sitemap.xml
