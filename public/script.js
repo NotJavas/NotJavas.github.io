@@ -11,10 +11,16 @@ themeToggle.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
 
-// Plausible Analytics - Custom Events
+// GoatCounter Analytics - Custom Events
+// GoatCounter no maneja props como Plausible: se codifican en el "path" del evento.
 const trackEvent = (eventName, props = {}) => {
-  if (window.plausible) {
-    window.plausible(eventName, { props });
+  if (window.goatcounter && window.goatcounter.count) {
+    const detail = Object.values(props).filter(Boolean).join('/');
+    window.goatcounter.count({
+      path: detail ? `${eventName}/${detail}` : eventName,
+      title: eventName,
+      event: true,
+    });
   }
 };
 
