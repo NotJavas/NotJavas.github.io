@@ -864,6 +864,70 @@ main { position: relative; z-index: 1; }
   .combo-arrow { display: none; }
 }
 
+/* ---------- Roadmap / Proceso ---------- */
+.roadmap { padding: 90px 0; position: relative; }
+.roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1052px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+}
+
+.roadmap-list {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+  list-style: none;
+}
+
+.roadmap-step {
+  display: flex;
+  gap: 22px;
+  position: relative;
+  padding-bottom: 36px;
+}
+.roadmap-step:last-child { padding-bottom: 0; }
+.roadmap-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 48px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-strong);
+}
+
+.roadmap-num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--on-accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: 2px solid var(--border-strong);
+  position: relative;
+  z-index: 1;
+}
+
+.roadmap-content { padding-top: 6px; }
+.roadmap-content h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.roadmap-content p { color: var(--text-dim); font-size: 0.95rem; margin: 0; }
+
+@media (max-width: 720px) {
+  .roadmap-step { gap: 16px; }
+  .roadmap-num { width: 40px; height: 40px; font-size: 1rem; }
+  .roadmap-step:not(:last-child)::before { left: 19px; top: 40px; }
+}
+
 /* ---------- Contacto ---------- */
 .contact-box {
   max-width: 1100px;
