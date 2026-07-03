@@ -16,7 +16,7 @@
   },
   {
     "id": "data",
-    "title": "Datos &amp; Sistemas",
+    "title": "Datos & Sistemas",
     "tags": ["PostgreSQL", "SQL Server", "SQLite", "OAuth2 / JWT", "Octave / MATLAB"]
   }
 ]
