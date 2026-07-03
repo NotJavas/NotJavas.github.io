@@ -853,37 +853,6 @@ main { position: relative; z-index: 1; }
 .footer a { color: var(--text-dim); font-weight: 500; }
 .footer a:hover { color: var(--accent); }
 
-/* ---------- Marquee de tecnologías ---------- */
-.marquee {
-  overflow: hidden;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 0;
-  position: relative;
-  z-index: 1;
-  background-color: var(--surface);
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 40s linear infinite;
-}
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track span {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  white-space: nowrap;
-  margin: 0 20px;
-  transition: color .2s;
-}
-.marquee-track span:hover {
-  color: var(--text);
-}
-@keyframes marquee {
-  to { transform: translateX(-50%); }
-}
-
 /* ---------- Animación reveal (con stagger en grids) ---------- */
 .reveal {
   opacity: 0;
