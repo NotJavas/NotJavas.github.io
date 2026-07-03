@@ -34,12 +34,14 @@ document.querySelectorAll('.mailto').forEach(a => {
   });
 });
 
-// Tracking de contacto por WhatsApp y teléfono
-document.querySelectorAll('a[href^="https://wa.me"]').forEach(a => {
-  a.addEventListener('click', () => trackEvent('contact_click', { type: 'whatsapp' }));
-});
-document.querySelectorAll('a[href^="tel:"]').forEach(a => {
-  a.addEventListener('click', () => trackEvent('contact_click', { type: 'call' }));
+// Centralized tracking for all contact clicks using event delegation
+document.body.addEventListener('click', (e) => {
+  const contactLink = e.target.closest('a[href^="https://wa.me"], a[href^="tel:"]');
+  if (contactLink) {
+    const href = contactLink.getAttribute('href');
+    const type = href.startsWith('tel:') ? 'call' : 'whatsapp';
+    trackEvent('contact_click', { type });
+  }
 });
 
 // Track CTA clicks (navegación interna)
