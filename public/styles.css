@@ -570,10 +570,11 @@ main { position: relative; z-index: 1; }
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1fr;
-  gap: 28px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
   align-items: end;
 }
+.shots-grid .shot-browser { grid-column: span 2; }
 
 .shot { margin: 0; text-align: center; }
 
@@ -917,6 +918,7 @@ main { position: relative; z-index: 1; }
 @media (max-width: 1000px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .shots-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .shots-grid .shot-browser { grid-column: auto; }
 }
 
 @media (max-width: 720px) {
