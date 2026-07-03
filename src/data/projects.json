@@ -114,52 +114,6 @@
     "tags": ["Octave / MATLAB", "Backpropagation", "MLP"]
   },
   {
-    "id": "registro",
-    "category": "Desktop App",
-    "badge": {
-      "type": "link",
-      "text": "Ver código →",
-      "href": "https://github.com/NotJavas/Registro"
-    },
-    "title": "Registro",
-    "featured": false,
-    "caseStudy": {
-      "problem": "El control escolar en papel y Excel se vuelve lento y propenso a errores.",
-      "solution": "Sistema de escritorio que centraliza alumnos, maestros y materias en un solo lugar.",
-      "result": "CRUD completo funcionando sobre SQLite, con reportes exportables a Excel."
-    },
-    "features": [
-      "CRUD completo de alumnos, maestros y materias",
-      "Exportación de reportes a Excel",
-      "Persistencia local con SQLite + Entity Framework",
-      "Interfaz de escritorio en WPF/XAML"
-    ],
-    "tags": ["C#", "WPF", "Entity Framework", "SQLite"]
-  },
-  {
-    "id": "sandsimulator",
-    "category": "Simulación",
-    "badge": {
-      "type": "link",
-      "text": "Ver código →",
-      "href": "https://github.com/S4rtox/SandSimulatorC-"
-    },
-    "title": "Sand Simulator",
-    "featured": false,
-    "caseStudy": {
-      "problem": "Simular miles de partículas en tiempo real exige un motor realmente eficiente.",
-      "solution": "Autómatas celulares en C#: una reescritura completa de la primera versión para ganar rendimiento.",
-      "result": "Motor funcional documentado con DocFX y diagramas de clases de su arquitectura."
-    },
-    "features": [
-      "Simulación de arena basada en autómatas celulares",
-      "Reescritura completa priorizando rendimiento",
-      "Documentación técnica generada con DocFX",
-      "Diagramas de clases de la arquitectura del motor"
-    ],
-    "tags": ["C#", "Autómatas celulares", "Simulación"]
-  },
-  {
     "id": "desaparecidos",
     "category": "Data Science · Impacto Social",
     "badge": {
