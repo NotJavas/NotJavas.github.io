@@ -4,13 +4,18 @@ interface Props {
     id: string;
     icon: string;
     title: string;
+    title_en?: string;
     description: string;
+    description_en?: string;
     features: string[];
+    features_en?: string[];
     priceOld: string;
     priceNew: string;
     priceUSD: string;
     subject: string;
+    subject_en?: string;
     body: string;
+    body_en?: string;
   };
 }
 
@@ -30,16 +35,16 @@ const iconSVG = {
       <Fragment set:html={iconSVG[pricing.icon as keyof typeof iconSVG]} />
     </svg>
   </div>
-  <h3>{pricing.title}</h3>
-  <p>{pricing.description}</p>
+  <h3 data-en={pricing.title_en}>{pricing.title}</h3>
+  <p data-en={pricing.description_en}>{pricing.description}</p>
   <ul class="features">
-    {pricing.features.map(feature => (
-      <li>{feature}</li>
+    {pricing.features.map((feature, i) => (
+      <li data-en={pricing.features_en?.[i]}>{feature}</li>
     ))}
   </ul>
   <div class="price">
     <span class="price-old">{pricing.priceOld}</span>
-    <div>Tu primer proyecto: <strong>{pricing.priceNew}</strong><span class="price-usd">({pricing.priceUSD})</span></div>
+    <div><span data-en="Your first project:">Tu primer proyecto:</span> <strong>{pricing.priceNew}</strong><span class="price-usd">({pricing.priceUSD})</span></div>
   </div>
-  <a href="#contact" class="btn btn-ghost pricing-cta mailto" data-u="javierfsanvaz" data-d="hotmail.com" data-s={pricing.subject} data-b={pricing.body}>Pedir cotización</a>
+  <a href="#contact" class="btn btn-ghost pricing-cta mailto" data-u="javierfsanvaz" data-d="hotmail.com" data-s={pricing.subject} data-s-en={pricing.subject_en} data-b={pricing.body} data-b-en={pricing.body_en} data-en="Request a quote">Pedir cotización</a>
 </article>

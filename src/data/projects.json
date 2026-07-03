@@ -2,22 +2,33 @@
   {
     "id": "monei",
     "category": "iOS App · Proyecto insignia",
+    "category_en": "iOS App · Flagship project",
     "badge": {
       "type": "private",
-      "text": "Repo privado"
+      "text": "Repo privado",
+      "text_en": "Private repo"
     },
     "title": "MONEI",
     "featured": true,
     "caseStudy": {
       "problem": "Las apps de pago suelen sentirse genéricas y poco confiables para quien las usa.",
+      "problem_en": "Payment apps often feel generic and untrustworthy to the people using them.",
       "solution": "App nativa en SwiftUI con gestión de tarjetas y solicitud de pagos, cuidando cada detalle visual.",
-      "result": "App funcional con arquitectura MVVM limpia, lista para crecer módulo por módulo."
+      "solution_en": "Native SwiftUI app with card management and payment requests, with attention to every visual detail.",
+      "result": "App funcional con arquitectura MVVM limpia, lista para crecer módulo por módulo.",
+      "result_en": "A working app with clean MVVM architecture, ready to grow module by module."
     },
     "features": [
       "Gestión de tarjetas guardadas con validación en tiempo real",
       "Flujo de solicitud de pago con estados dinámicos",
       "Arquitectura MVVM con bindings nativos de SwiftUI",
       "Componentes reutilizables y animaciones pulidas"
+    ],
+    "features_en": [
+      "Saved card management with real-time validation",
+      "Payment request flow with dynamic states",
+      "MVVM architecture with native SwiftUI bindings",
+      "Reusable components and polished animations"
     ],
     "tags": ["Swift", "SwiftUI", "MVVM"]
   },
@@ -27,20 +38,30 @@
     "badge": {
       "type": "link",
       "text": "Ver código →",
+      "text_en": "View code →",
       "href": "https://github.com/ShowbizMeat103/DEFIANTS"
     },
     "title": "Defiants",
     "featured": false,
     "caseStudy": {
       "problem": "Los torneos de esports se organizan con formularios sueltos, Discord y hojas de cálculo.",
+      "problem_en": "Esports tournaments get organized through scattered forms, Discord, and spreadsheets.",
       "solution": "Plataforma centralizada con registro de equipos, roles y panel de administración.",
-      "result": "Sistema full-stack completo con autenticación segura y base de datos PostgreSQL."
+      "solution_en": "A centralized platform with team registration, roles, and an admin panel.",
+      "result": "Sistema full-stack completo con autenticación segura y base de datos PostgreSQL.",
+      "result_en": "A complete full-stack system with secure authentication and a PostgreSQL database."
     },
     "features": [
       "Registro e inscripción de equipos a torneos",
       "Panel de administración con control de roles",
       "Autenticación segura vía JWT",
       "Persistencia en PostgreSQL con Entity Framework Core"
+    ],
+    "features_en": [
+      "Team registration and tournament sign-up",
+      "Admin panel with role-based control",
+      "Secure authentication via JWT",
+      "PostgreSQL persistence with Entity Framework Core"
     ],
     "tags": ["ASP.NET Core", "Blazor", "EF Core", "PostgreSQL", "JWT"]
   },
@@ -50,20 +71,30 @@
     "badge": {
       "type": "link",
       "text": "Ver código →",
+      "text_en": "View code →",
       "href": "https://github.com/NotJavas/Hackathon"
     },
     "title": "Nexus Académico",
     "featured": false,
     "caseStudy": {
       "problem": "El desgaste académico se detecta cuando ya es tarde, tanto en alumnos como en profesores.",
+      "problem_en": "Academic burnout gets noticed once it's already too late, for students and teachers alike.",
       "solution": "Conectar la plataforma directamente con Google Classroom para medir la carga real de trabajo.",
-      "result": "Prototipo funcional de hackathon con login de Google y paneles separados por rol."
+      "solution_en": "Connect the platform directly to Google Classroom to measure real workload.",
+      "result": "Prototipo funcional de hackathon con login de Google y paneles separados por rol.",
+      "result_en": "A working hackathon prototype with Google login and role-based dashboards."
     },
     "features": [
       "Login con Google OAuth2",
       "Integración real con la API de Google Classroom",
       "Paneles diferenciados para profesores y estudiantes",
       "Score de desgaste académico calculado en tiempo real"
+    ],
+    "features_en": [
+      "Google OAuth2 login",
+      "Real integration with the Google Classroom API",
+      "Separate dashboards for teachers and students",
+      "Real-time academic burnout score"
     ],
     "tags": ["Node.js", "Express", "Vite", "TypeScript", "Google OAuth2"]
   },
@@ -73,20 +104,30 @@
     "badge": {
       "type": "link",
       "text": "Ver código →",
+      "text_en": "View code →",
       "href": "https://github.com/NotJavas/Destiny-App"
     },
     "title": "Destiny App",
     "featured": false,
     "caseStudy": {
       "problem": "Los eventos locales de la ciudad están dispersos entre redes sociales y el boca en boca.",
+      "problem_en": "Local city events are scattered across social media and word of mouth.",
       "solution": "App Android con mapa interactivo que concentra los eventos de Querétaro en un solo lugar.",
-      "result": "App moderna en Jetpack Compose con interfaz glassmorphism y arquitectura reactiva."
+      "solution_en": "An Android app with an interactive map that brings Querétaro's events into one place.",
+      "result": "App moderna en Jetpack Compose con interfaz glassmorphism y arquitectura reactiva.",
+      "result_en": "A modern Jetpack Compose app with a glassmorphism interface and reactive architecture."
     },
     "features": [
       "Descubrimiento de eventos en un mapa interactivo",
       "Interfaz glassmorphism 100% Jetpack Compose",
       "Arquitectura MVVM + StateFlow reactivo",
       "Filtros por categoría y fecha"
+    ],
+    "features_en": [
+      "Event discovery on an interactive map",
+      "100% Jetpack Compose glassmorphism interface",
+      "MVVM + reactive StateFlow architecture",
+      "Filters by category and date"
     ],
     "tags": ["Kotlin", "Jetpack Compose", "MVVM", "Google Maps SDK"]
   },
@@ -96,14 +137,18 @@
     "badge": {
       "type": "link",
       "text": "Ver código →",
+      "text_en": "View code →",
       "href": "https://github.com/NotJavas/RedNeuronal"
     },
     "title": "RedNeuronal",
     "featured": false,
     "caseStudy": {
       "problem": "Usar frameworks de ML sin entender qué pasa adentro deja huecos de fundamento.",
+      "problem_en": "Using ML frameworks without understanding what's happening inside leaves real gaps.",
       "solution": "Implementar la red completa a mano — forward pass, costo y backpropagation — en Octave.",
-      "result": "Reconoce dígitos manuscritos con error de 0.0001, entrenada con ~1900 imágenes propias."
+      "solution_en": "Implement the whole network by hand — forward pass, cost, and backpropagation — in Octave.",
+      "result": "Reconoce dígitos manuscritos con error de 0.0001, entrenada con ~1900 imágenes propias.",
+      "result_en": "Recognizes handwritten digits with a 0.0001 error, trained on ~1,900 of my own images."
     },
     "features": [
       "Red implementada desde cero, sin frameworks de ML",
@@ -111,21 +156,33 @@
       "Entrenada con ~1900 imágenes propias",
       "Error de convergencia de 0.0001, documentado paso a paso"
     ],
+    "features_en": [
+      "Network built from scratch, no ML frameworks",
+      "Backpropagation derived and coded by hand",
+      "Trained on ~1,900 original images",
+      "Convergence error of 0.0001, documented step by step"
+    ],
     "tags": ["Octave / MATLAB", "Backpropagation", "MLP"]
   },
   {
     "id": "desaparecidos",
     "category": "Data Science · Impacto Social",
+    "category_en": "Data Science · Social Impact",
     "badge": {
       "type": "private",
-      "text": "Código disponible bajo petición"
+      "text": "Código disponible bajo petición",
+      "text_en": "Code available on request"
     },
     "title": "Personas Desaparecidas",
+    "title_en": "Missing Persons",
     "featured": true,
     "caseStudy": {
       "problem": "Los datos públicos de desapariciones en México existen, pero dispersos y sin contexto son solo números.",
+      "problem_en": "Public data on missing persons in Mexico exists, but scattered and without context it's just numbers.",
       "solution": "Dashboard que cruza sexo, edad, entidad y estatus de la víctima para ver patrones reales, no cifras sueltas.",
-      "result": "Panel con miles de registros analizados, mostrando el repunte de casos a nivel nacional desde 2007."
+      "solution_en": "A dashboard that cross-references sex, age, state, and victim status to reveal real patterns, not loose figures.",
+      "result": "Panel con miles de registros analizados, mostrando el repunte de casos a nivel nacional desde 2007.",
+      "result_en": "A dashboard analyzing thousands of records, showing the nationwide surge in cases since 2007."
     },
     "features": [
       "Distribución por sexo, edad y estatus de la víctima",
@@ -133,27 +190,44 @@
       "Serie histórica de desapariciones por año (1960-2024)",
       "Hecho para visibilizar un problema, no solo para practicar"
     ],
+    "features_en": [
+      "Breakdown by sex, age, and victim status",
+      "Ranking of states with the most records",
+      "Historical trend of disappearances by year (1960-2024)",
+      "Built to make a problem visible, not just to practice"
+    ],
     "tags": ["Python", "Pandas", "Matplotlib", "Seaborn"]
   },
   {
     "id": "centinel",
     "category": "Data Science · Seguridad Vial",
+    "category_en": "Data Science · Road Safety",
     "badge": {
       "type": "private",
-      "text": "Código disponible bajo petición"
+      "text": "Código disponible bajo petición",
+      "text_en": "Code available on request"
     },
     "title": "Centinel",
     "featured": false,
     "caseStudy": {
       "problem": "Los accidentes en carreteras federales se analizan después de que ya ocurrieron, nunca antes.",
+      "problem_en": "Accidents on federal highways get analyzed after they've already happened, never before.",
       "solution": "Modelar la red carretera como un grafo y calcular un score de riesgo por tramo, no solo por punto aislado.",
-      "result": "Mapa de riesgo real sobre la red vial, señalando los tramos y cruces más peligrosos."
+      "solution_en": "Model the highway network as a graph and calculate a risk score per segment, not just per isolated point.",
+      "result": "Mapa de riesgo real sobre la red vial, señalando los tramos y cruces más peligrosos.",
+      "result_en": "A real risk map over the road network, flagging the most dangerous stretches and intersections."
     },
     "features": [
       "Modelado de la red vial como grafo (nodos y aristas)",
       "Score de riesgo calculado por tramo de carretera",
       "Visualización geoespacial del riesgo por color",
       "Pensado para prevenir accidentes, no solo contarlos"
+    ],
+    "features_en": [
+      "Road network modeled as a graph (nodes and edges)",
+      "Risk score calculated per road segment",
+      "Geospatial risk visualization by color",
+      "Built to prevent accidents, not just count them"
     ],
     "tags": ["Python", "NetworkX", "Grafos", "Geoespacial"]
   },
@@ -162,20 +236,31 @@
     "category": "Machine Learning",
     "badge": {
       "type": "private",
-      "text": "Código disponible bajo petición"
+      "text": "Código disponible bajo petición",
+      "text_en": "Code available on request"
     },
     "title": "Titanic — Predicción de Supervivencia",
+    "title_en": "Titanic — Survival Prediction",
     "featured": false,
     "caseStudy": {
       "problem": "El ejercicio clásico de Kaggle se queda corto si solo entrenas un modelo y ya.",
+      "problem_en": "The classic Kaggle exercise falls short if you just train one model and call it done.",
       "solution": "Comparé 5 modelos (Regresión Logística, SVM, Random Forest, XGBoost, Voting Classifier) con validación cruzada real.",
-      "result": "El SVM ganó con ~83% de accuracy — comparar en serio importa más que presumir un solo número."
+      "solution_en": "I compared 5 models (Logistic Regression, SVM, Random Forest, XGBoost, Voting Classifier) with real cross-validation.",
+      "result": "El SVM ganó con ~83% de accuracy — comparar en serio importa más que presumir un solo número.",
+      "result_en": "SVM won with ~83% accuracy — comparing properly matters more than bragging about one number."
     },
     "features": [
       "Análisis exploratorio completo (edad, clase, tarifa, correlaciones)",
       "5 modelos comparados con validación cruzada (CV=5)",
       "Métricas completas: accuracy, precision, recall y F1-score",
       "Ensamble final con Voting Classifier"
+    ],
+    "features_en": [
+      "Full exploratory analysis (age, class, fare, correlations)",
+      "5 models compared with cross-validation (CV=5)",
+      "Complete metrics: accuracy, precision, recall and F1-score",
+      "Final ensemble with a Voting Classifier"
     ],
     "tags": ["Python", "Scikit-learn", "XGBoost", "Pandas"]
   },
@@ -184,20 +269,30 @@
     "category": "Web · Landing Page",
     "badge": {
       "type": "private",
-      "text": "Código disponible bajo petición"
+      "text": "Código disponible bajo petición",
+      "text_en": "Code available on request"
     },
     "title": "Melts",
     "featured": false,
     "caseStudy": {
       "problem": "Las landing pages de comida rápida suelen ser genéricas, sin personalidad de marca.",
+      "problem_en": "Fast-food landing pages tend to be generic, with no brand personality.",
       "solution": "Identidad propia: tono directo, tipografía bold y una sección de transparencia que genera confianza.",
-      "result": "Landing completa con menú, marca y copywriting propio, lista para conectarse a un sistema de pedidos real."
+      "solution_en": "A real identity: a direct tone, bold typography, and a transparency section that builds trust.",
+      "result": "Landing completa con menú, marca y copywriting propio, lista para conectarse a un sistema de pedidos real.",
+      "result_en": "A complete landing page with menu, brand, and original copywriting, ready to connect to a real ordering system."
     },
     "features": [
       "Identidad de marca propia (tipografía, color, tono de voz)",
       "Menú con tarjetas de producto y precios",
       "Sección de transparencia ('¿Por qué tan barato?')",
       "Diseño responsive de principio a fin"
+    ],
+    "features_en": [
+      "Original brand identity (typography, color, tone of voice)",
+      "Menu with product cards and pricing",
+      "Transparency section ('Why so cheap?')",
+      "Fully responsive design"
     ],
     "tags": ["React", "Tailwind CSS", "Vite"]
   }

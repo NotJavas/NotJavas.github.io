@@ -190,6 +190,27 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0; letter-spacing: -0.025em; }
 [data-theme="light"] .icon-sun { display: none; }
 [data-theme="light"] .icon-moon { display: block; }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  background: var(--surface);
+  border: 2px solid var(--border-strong);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: border-color .2s, background-color .3s;
+}
+.lang-toggle:hover { border-color: var(--accent); }
+.lang-toggle .to-es { display: none; }
+[data-lang="en"] .lang-toggle .to-en { display: none; }
+[data-lang="en"] .lang-toggle .to-es { display: inline; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -1037,7 +1058,7 @@ main { position: relative; z-index: 1; }
    ============================================================ */
 
 /* Bordes gruesos en todos los contenedores y chips */
-.nav-cta, .theme-toggle, .eyebrow, .trust-item,
+.nav-cta, .theme-toggle, .lang-toggle, .eyebrow, .trust-item,
 .skill-card, .project-card, .case, .pricing-card, .combo-card,
 .contact-box, .badge-link, .badge-private, .combo-discount,
 .tags span, .browser-bar {
@@ -1133,6 +1154,9 @@ main { position: relative; z-index: 1; }
 /* Física de resorte: micro-rebotes juguetones */
 .theme-toggle { transition: transform .25s var(--spring), border-color .2s, background-color .3s; }
 .theme-toggle:hover { transform: scale(1.12) rotate(14deg); border-color: var(--accent); }
+
+.lang-toggle { transition: transform .25s var(--spring), border-color .2s, background-color .3s; }
+.lang-toggle:hover { transform: scale(1.08); border-color: var(--accent); }
 
 .trust-item { transition: transform .25s var(--spring), border-color .2s, background-color .3s; }
 .trust-item:hover { transform: rotate(-1.5deg) scale(1.05); border-color: var(--accent-2); }

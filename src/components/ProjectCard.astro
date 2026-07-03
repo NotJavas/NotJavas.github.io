@@ -3,19 +3,26 @@ interface Props {
   project: {
     id: string;
     category: string;
+    category_en?: string;
     title: string;
+    title_en?: string;
     featured?: boolean;
     badge?: {
       type: string;
       text: string;
+      text_en?: string;
       href?: string;
     };
     caseStudy?: {
       problem: string;
+      problem_en?: string;
       solution: string;
+      solution_en?: string;
       result: string;
+      result_en?: string;
     };
     features?: string[];
+    features_en?: string[];
     tags?: string[];
   };
 }
@@ -25,40 +32,40 @@ const { project } = Astro.props;
 
 <article class={`project-card reveal ${project.featured ? 'featured' : ''}`}>
   <div class="project-top">
-    <span class="project-cat">{project.category}</span>
+    <span class="project-cat" data-en={project.category_en}>{project.category}</span>
     {project.badge && (
       project.badge.type === 'private' ? (
-        <span class="project-badge badge-private">{project.badge.text}</span>
+        <span class="project-badge badge-private" data-en={project.badge.text_en}>{project.badge.text}</span>
       ) : (
-        <a href={project.badge.href} target="_blank" rel="noopener" class="project-badge badge-link">
+        <a href={project.badge.href} target="_blank" rel="noopener" class="project-badge badge-link" data-en={project.badge.text_en}>
           {project.badge.text}
         </a>
       )
     )}
   </div>
-  <h3>{project.title}</h3>
-  
+  <h3 data-en={project.title_en}>{project.title}</h3>
+
   {project.caseStudy && (
     <div class="case">
       <div class="case-row">
-        <span class="case-label">Problema</span>
-        <p>{project.caseStudy.problem}</p>
+        <span class="case-label" data-en="Problem">Problema</span>
+        <p data-en={project.caseStudy.problem_en}>{project.caseStudy.problem}</p>
       </div>
       <div class="case-row">
-        <span class="case-label">Solución</span>
-        <p>{project.caseStudy.solution}</p>
+        <span class="case-label" data-en="Solution">Solución</span>
+        <p data-en={project.caseStudy.solution_en}>{project.caseStudy.solution}</p>
       </div>
       <div class="case-row">
-        <span class="case-label">Resultado</span>
-        <p>{project.caseStudy.result}</p>
+        <span class="case-label" data-en="Result">Resultado</span>
+        <p data-en={project.caseStudy.result_en}>{project.caseStudy.result}</p>
       </div>
     </div>
   )}
 
   {project.features && project.features.length > 0 && (
     <ul class="features">
-      {project.features.map(feature => (
-        <li>{feature}</li>
+      {project.features.map((feature, i) => (
+        <li data-en={project.features_en?.[i]}>{feature}</li>
       ))}
     </ul>
   )}

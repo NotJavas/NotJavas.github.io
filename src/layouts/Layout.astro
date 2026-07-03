@@ -41,12 +41,17 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 
-  <!-- Theme detection (blocks FOUC) -->
-  <script>
+  <!-- Theme + language detection (blocks FOUC) -->
+  <script is:inline>
     (function() {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
         document.documentElement.dataset.theme = 'light';
+      }
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang === 'en') {
+        document.documentElement.dataset.lang = 'en';
+        document.documentElement.lang = 'en';
       }
     })();
   </script>

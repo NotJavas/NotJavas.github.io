@@ -3,56 +3,74 @@
     "id": "web-android",
     "tags": ["Web", "+", "Android"],
     "discount": "-10% del total",
+    "discount_en": "-10% off total",
     "priceOld": "$29,000 MXN",
     "priceNew": "$26,100 MXN",
     "priceUSD": "~$1,460 USD",
     "featured": false,
     "subject": "Quiero el paquete Web + Android",
-    "body": "Hola Javier, me interesa el paquete de página web + app para Android. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que tenga la web:\n- Qué necesito que haga la app:\n- Para cuándo los necesito:\n\n¡Gracias!"
+    "subject_en": "I want the Web + Android package",
+    "body": "Hola Javier, me interesa el paquete de página web + app para Android. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que tenga la web:\n- Qué necesito que haga la app:\n- Para cuándo los necesito:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in the website + Android app package. So you can give me a more accurate quote:\n\n- My business name:\n- What I need the website to include:\n- What I need the app to do:\n- When I need them by:\n\nThanks!"
   },
   {
     "id": "web-ios",
     "tags": ["Web", "+", "iOS"],
     "discount": "-5% del total",
+    "discount_en": "-5% off total",
     "priceOld": "$29,000 MXN",
     "priceNew": "$27,550 MXN",
     "priceUSD": "~$1,540 USD",
     "featured": false,
     "subject": "Quiero el paquete Web + iOS",
-    "body": "Hola Javier, me interesa el paquete de página web + app para iPhone. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que tenga la web:\n- Qué necesito que haga la app:\n- Para cuándo los necesito:\n\n¡Gracias!"
+    "subject_en": "I want the Web + iOS package",
+    "body": "Hola Javier, me interesa el paquete de página web + app para iPhone. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que tenga la web:\n- Qué necesito que haga la app:\n- Para cuándo los necesito:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in the website + iPhone app package. So you can give me a more accurate quote:\n\n- My business name:\n- What I need the website to include:\n- What I need the app to do:\n- When I need them by:\n\nThanks!"
   },
   {
     "id": "android-ios",
     "tags": ["Android", "+", "iOS"],
     "discount": "-8% del total",
+    "discount_en": "-8% off total",
     "priceOld": "$50,000 MXN",
     "priceNew": "$46,000 MXN",
     "priceUSD": "~$2,580 USD",
     "featured": false,
     "subject": "Quiero el paquete Android + iOS",
-    "body": "Hola Javier, me interesa tener mi app en Android y iPhone al mismo tiempo. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app:\n- Cuántos usuarios espero al inicio:\n\n¡Gracias!"
+    "subject_en": "I want the Android + iOS package",
+    "body": "Hola Javier, me interesa tener mi app en Android y iPhone al mismo tiempo. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app:\n- Cuántos usuarios espero al inicio:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in having my app on Android and iPhone at the same time. So you can give me a more accurate quote:\n\n- My business or project name:\n- What I want the app to do:\n- How many users I expect at launch:\n\nThanks!"
   },
   {
     "id": "web-system",
     "tags": ["Web", "+", "Sistema"],
+    "tags_en": ["Web", "+", "System"],
     "discount": "-8% del total",
+    "discount_en": "-8% off total",
     "priceOld": "$34,000 MXN",
     "priceNew": "$31,280 MXN",
     "priceUSD": "~$1,770 USD",
     "featured": false,
     "subject": "Quiero el paquete Web + Sistema",
-    "body": "Hola Javier, me interesa el paquete de página web + sistema a la medida. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué uso ahora para organizarme:\n- Qué quiero automatizar primero:\n\n¡Gracias!"
+    "subject_en": "I want the Web + System package",
+    "body": "Hola Javier, me interesa el paquete de página web + sistema a la medida. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué uso ahora para organizarme:\n- Qué quiero automatizar primero:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in the website + custom system package. So you can give me a more accurate quote:\n\n- My business name:\n- What I currently use to stay organized:\n- What I want to automate first:\n\nThanks!"
   },
   {
     "id": "complete",
     "tags": ["Web", "+", "Android", "+", "iOS", "+", "Sistema"],
+    "tags_en": ["Web", "+", "Android", "+", "iOS", "+", "System"],
     "title": "Paquete completo",
+    "title_en": "Complete package",
     "discount": "-15% del total",
+    "discount_en": "-15% off total",
     "priceOld": "$84,000 MXN",
     "priceNew": "$71,400 MXN",
     "priceUSD": "~$4,010 USD",
     "featured": true,
     "subject": "Quiero el paquete completo",
-    "body": "Hola Javier, me interesa el paquete completo — web, app para Android, app para iPhone y un sistema a la medida. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que cubra cada parte (web, apps, sistema interno):\n- Para cuándo te gustaría arrancar:\n\n¡Gracias!"
+    "subject_en": "I want the complete package",
+    "body": "Hola Javier, me interesa el paquete completo — web, app para Android, app para iPhone y un sistema a la medida. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué necesito que cubra cada parte (web, apps, sistema interno):\n- Para cuándo te gustaría arrancar:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in the complete package — website, Android app, iPhone app, and a custom system. So you can give me a more accurate quote:\n\n- My business name:\n- What I need each part to cover (web, apps, internal system):\n- When I'd like to get started:\n\nThanks!"
   }
 ]

@@ -3,14 +3,19 @@ interface Props {
   combo: {
     id: string;
     tags: string[];
+    tags_en?: string[];
     title?: string;
+    title_en?: string;
     discount: string;
+    discount_en?: string;
     priceOld: string;
     priceNew: string;
     priceUSD: string;
     featured?: boolean;
     subject: string;
+    subject_en?: string;
     body: string;
+    body_en?: string;
   };
 }
 
@@ -19,15 +24,15 @@ const { combo } = Astro.props;
 
 <article class={`combo-card reveal ${combo.featured ? 'combo-featured' : ''}`}>
   <div class="combo-tags">
-    {combo.tags.map(tag => (
-      <span>{tag}</span>
+    {combo.tags.map((tag, i) => (
+      <span data-en={combo.tags_en?.[i]}>{tag}</span>
     ))}
   </div>
-  {combo.title && <h4>{combo.title}</h4>}
-  <div class="combo-discount">{combo.discount}</div>
+  {combo.title && <h4 data-en={combo.title_en}>{combo.title}</h4>}
+  <div class="combo-discount" data-en={combo.discount_en}>{combo.discount}</div>
   <div class="price">
     <span class="price-old">{combo.priceOld}</span>
     <div><strong>{combo.priceNew}</strong><span class="price-usd">({combo.priceUSD})</span></div>
   </div>
-  <a href="#contact" class="btn btn-ghost pricing-cta mailto" data-u="javierfsanvaz" data-d="hotmail.com" data-s={combo.subject} data-b={combo.body}>Pedir cotización</a>
+  <a href="#contact" class="btn btn-ghost pricing-cta mailto" data-u="javierfsanvaz" data-d="hotmail.com" data-s={combo.subject} data-s-en={combo.subject_en} data-b={combo.body} data-b-en={combo.body_en} data-en="Request a quote">Pedir cotización</a>
 </article>

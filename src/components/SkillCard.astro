@@ -3,6 +3,7 @@ interface Props {
   skill: {
     id: string;
     title: string;
+    title_en?: string;
     tags: string[];
   };
 }
@@ -11,7 +12,7 @@ const { skill } = Astro.props;
 ---
 
 <div class="skill-card">
-  <h3>{skill.title}</h3>
+  <h3 data-en={skill.title_en}>{skill.title}</h3>
   <div class="tags">
     {skill.tags.map(tag => (
       <span>{tag}</span>

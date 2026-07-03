@@ -3,64 +3,100 @@
     "id": "website",
     "icon": "globe",
     "title": "Página web para tu negocio",
+    "title_en": "A website for your business",
     "description": "Que te encuentren en Google, que se vea profesional y que la gente pueda contactarte sin complicaciones — tú solo mandas el contenido, yo me encargo del resto.",
+    "description_en": "Get found on Google, look professional, and let people reach you without hassle — you just send the content, I handle the rest.",
     "features": [
       "Diseño a tu medida, se ve bien en cualquier celular",
       "Formulario de contacto y botón de WhatsApp",
       "Lista para usarse — hosting y dominio incluidos en la entrega"
     ],
+    "features_en": [
+      "Custom design that looks great on any phone",
+      "Contact form and WhatsApp button",
+      "Ready to use — hosting and domain included on delivery"
+    ],
     "priceOld": "$4,000 MXN",
     "priceNew": "$3,200 MXN",
     "priceUSD": "~$175 USD",
     "subject": "Quiero una página web para mi negocio",
-    "body": "Hola Javier, me interesa una página web para mi negocio. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué quiero que tenga la página (catálogo, horarios, formulario, WhatsApp, etc.):\n- Si ya tengo dominio o quiero que se incluya:\n- Para cuándo la necesito:\n\n¡Gracias!"
+    "subject_en": "I want a website for my business",
+    "body": "Hola Javier, me interesa una página web para mi negocio. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué quiero que tenga la página (catálogo, horarios, formulario, WhatsApp, etc.):\n- Si ya tengo dominio o quiero que se incluya:\n- Para cuándo la necesito:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in a website for my business. So you can give me a more accurate quote:\n\n- My business name:\n- What I want the site to include (catalog, hours, form, WhatsApp, etc.):\n- Whether I already have a domain or want one included:\n- When I need it by:\n\nThanks!"
   },
   {
     "id": "android",
     "icon": "android",
     "title": "App para Android",
+    "title_en": "An Android app",
     "description": "Una app con tu marca que tus clientes se descargan y usan desde su celular Android — para pedidos, reservas, membresías o lo que tu negocio necesite.",
+    "description_en": "A branded app your customers download and use on their Android phone — for orders, bookings, memberships, or whatever your business needs.",
     "features": [
       "Diseño e identidad propios, no una plantilla genérica",
       "Publicación en Google Play incluida",
       "Lista para crecer con más funciones a futuro"
     ],
+    "features_en": [
+      "Original design and identity, not a generic template",
+      "Google Play publishing included",
+      "Ready to grow with more features down the road"
+    ],
     "priceOld": "$25,000 MXN",
     "priceNew": "$20,000 MXN",
     "priceUSD": "~$1,120 USD",
     "subject": "Quiero una app para Android",
-    "body": "Hola Javier, me interesa una app para Android. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app (pedidos, reservas, membresías, etc.):\n- Cuántos usuarios espero al inicio:\n- Para cuándo la necesito:\n\n¡Gracias!"
+    "subject_en": "I want an Android app",
+    "body": "Hola Javier, me interesa una app para Android. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app (pedidos, reservas, membresías, etc.):\n- Cuántos usuarios espero al inicio:\n- Para cuándo la necesito:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in an Android app. So you can give me a more accurate quote:\n\n- My business or project name:\n- What I want the app to do (orders, bookings, memberships, etc.):\n- How many users I expect at launch:\n- When I need it by:\n\nThanks!"
   },
   {
     "id": "ios",
     "icon": "ios",
     "title": "App para iOS",
+    "title_en": "An iOS app",
     "description": "Una app con tu marca que tus clientes se descargan y usan desde su iPhone — para pedidos, reservas, membresías o lo que tu negocio necesite.",
+    "description_en": "A branded app your customers download and use on their iPhone — for orders, bookings, memberships, or whatever your business needs.",
     "features": [
       "Diseño e identidad propios, no una plantilla genérica",
       "Publicación en App Store incluida",
       "Lista para crecer con más funciones a futuro"
     ],
+    "features_en": [
+      "Original design and identity, not a generic template",
+      "App Store publishing included",
+      "Ready to grow with more features down the road"
+    ],
     "priceOld": "$25,000 MXN",
     "priceNew": "$20,000 MXN",
     "priceUSD": "~$1,120 USD",
     "subject": "Quiero una app para iPhone",
-    "body": "Hola Javier, me interesa una app para iPhone. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app (pedidos, reservas, membresías, etc.):\n- Cuántos usuarios espero al inicio:\n- Para cuándo la necesito:\n\n¡Gracias!"
+    "subject_en": "I want an iPhone app",
+    "body": "Hola Javier, me interesa una app para iPhone. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio o proyecto:\n- Qué quiero que haga la app (pedidos, reservas, membresías, etc.):\n- Cuántos usuarios espero al inicio:\n- Para cuándo la necesito:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in an iPhone app. So you can give me a more accurate quote:\n\n- My business or project name:\n- What I want the app to do (orders, bookings, memberships, etc.):\n- How many users I expect at launch:\n- When I need it by:\n\nThanks!"
   },
   {
     "id": "system",
     "icon": "system",
     "title": "Sistema para organizar tu negocio",
+    "title_en": "A system to organize your business",
     "description": "Deja de llevar todo en Excel, WhatsApp o papel. Un solo lugar donde tú y tu equipo controlan pedidos, clientes, inventario o citas — con reportes que se generan solos.",
+    "description_en": "Stop running everything through Excel, WhatsApp, or paper. One place where you and your team manage orders, customers, inventory, or appointments — with reports that build themselves.",
     "features": [
       "Panel de control para ti y tu equipo, con permisos por usuario",
       "Toda tu información en un solo lugar, ordenada y respaldada",
       "Reportes automáticos — sin armar tablas a mano cada mes"
     ],
+    "features_en": [
+      "A control panel for you and your team, with per-user permissions",
+      "All your data in one place, organized and backed up",
+      "Automatic reports — no more building spreadsheets by hand every month"
+    ],
     "priceOld": "$30,000 MXN",
     "priceNew": "$24,000 MXN",
     "priceUSD": "~$1,360 USD",
     "subject": "Quiero un sistema a la medida",
-    "body": "Hola Javier, me interesa un sistema para organizar mi negocio. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué uso ahora para organizarme (Excel, WhatsApp, papel, etc.):\n- Qué quiero automatizar primero (pedidos, inventario, citas, reportes, etc.):\n- Cuántas personas de mi equipo lo usarían:\n\n¡Gracias!"
+    "subject_en": "I want a custom system",
+    "body": "Hola Javier, me interesa un sistema para organizar mi negocio. Para que me des una cotización más precisa:\n\n- Nombre de mi negocio:\n- Qué uso ahora para organizarme (Excel, WhatsApp, papel, etc.):\n- Qué quiero automatizar primero (pedidos, inventario, citas, reportes, etc.):\n- Cuántas personas de mi equipo lo usarían:\n\n¡Gracias!",
+    "body_en": "Hi Javier, I'm interested in a system to organize my business. So you can give me a more accurate quote:\n\n- My business name:\n- What I currently use to stay organized (Excel, WhatsApp, paper, etc.):\n- What I want to automate first (orders, inventory, appointments, reports, etc.):\n- How many people on my team would use it:\n\nThanks!"
   }
 ]

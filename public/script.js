@@ -24,17 +24,61 @@ const trackEvent = (eventName, props = {}) => {
   }
 };
 
+// ---------- Idioma (ES/EN) ----------
+// Cada elemento traducible trae data-en="..."; el texto en el HTML es el
+// original en español, que se guarda en data-es la primera vez que corre esto.
+const langToggle = document.getElementById('langToggle');
+
+function getLang() {
+  return document.documentElement.dataset.lang === 'en' ? 'en' : 'es';
+}
+
+function applyMailtoLang(lang) {
+  document.querySelectorAll('.mailto').forEach(a => {
+    const addr = a.dataset.u + '@' + a.dataset.d;
+    let href = 'mailto:' + addr;
+    const subject = lang === 'en' && a.dataset.sEn ? a.dataset.sEn : a.dataset.s;
+    const body = lang === 'en' && a.dataset.bEn ? a.dataset.bEn : a.dataset.b;
+    const params = [];
+    if (subject) params.push('subject=' + encodeURIComponent(subject));
+    if (body) params.push('body=' + encodeURIComponent(body));
+    if (params.length) href += '?' + params.join('&');
+    a.href = href;
+    if (a.dataset.show) a.textContent = addr;
+  });
+}
+
+function applyLang(lang) {
+  document.documentElement.dataset.lang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (!el.dataset.es) el.dataset.es = el.textContent;
+    el.textContent = lang === 'en' ? el.dataset.en : el.dataset.es;
+  });
+  document.querySelectorAll('[data-aria-en]').forEach(el => {
+    if (!el.dataset.ariaEs) el.dataset.ariaEs = el.getAttribute('aria-label') || '';
+    el.setAttribute('aria-label', lang === 'en' ? el.dataset.ariaEn : el.dataset.ariaEs);
+  });
+  applyMailtoLang(lang);
+  if (langToggle) {
+    langToggle.setAttribute('aria-label', lang === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés');
+  }
+}
+
+applyLang(getLang());
+
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    const next = getLang() === 'en' ? 'es' : 'en';
+    applyLang(next);
+    try { localStorage.setItem('lang', next); } catch (e) {}
+    trackEvent('lang_toggle', { lang: next });
+  });
+}
+
 // Correos ensamblados en runtime — la dirección completa nunca aparece en el HTML estático.
-// data-u = usuario, data-d = dominio, data-s = subject, data-b = body, data-show = mostrar dirección como texto.
+// data-u = usuario, data-d = dominio, data-s/-en = subject, data-b/-en = body, data-show = mostrar dirección como texto.
 document.querySelectorAll('.mailto').forEach(a => {
-  const addr = a.dataset.u + '@' + a.dataset.d;
-  let href = 'mailto:' + addr;
-  const params = [];
-  if (a.dataset.s) params.push('subject=' + encodeURIComponent(a.dataset.s));
-  if (a.dataset.b) params.push('body=' + encodeURIComponent(a.dataset.b));
-  if (params.length) href += '?' + params.join('&');
-  a.href = href;
-  if (a.dataset.show) a.textContent = addr;
   a.addEventListener('click', () => {
     trackEvent('contact_click', { type: 'email', subject: a.dataset.s || 'N/A' });
   });
