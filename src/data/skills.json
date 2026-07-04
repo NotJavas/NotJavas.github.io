@@ -2,22 +2,46 @@
   {
     "id": "mobile",
     "title": "Mobile",
-    "tags": ["Swift", "SwiftUI", "Kotlin", "Jetpack Compose", "MVVM"]
+    "tags": [
+      { "name": "Swift", "icon": "swift" },
+      { "name": "SwiftUI", "icon": "swiftui" },
+      { "name": "Kotlin", "icon": "kotlin" },
+      { "name": "Jetpack Compose", "icon": "jetpackcompose" },
+      { "name": "MVVM", "icon": "mvvm" }
+    ]
   },
   {
     "id": "backend",
     "title": "Backend",
-    "tags": ["C# / .NET", "Node.js", "Express", "Entity Framework", "REST APIs"]
+    "tags": [
+      { "name": "C# / .NET", "icon": "dotnet" },
+      { "name": "Node.js", "icon": "nodejs" },
+      { "name": "Express", "icon": "express" },
+      { "name": "Entity Framework", "icon": "entityframework" },
+      { "name": "REST APIs", "icon": "restapi" }
+    ]
   },
   {
     "id": "frontend",
     "title": "Web / Frontend",
-    "tags": ["React", "Blazor", "Vite", "Tailwind CSS", "TypeScript"]
+    "tags": [
+      { "name": "React", "icon": "react" },
+      { "name": "Blazor", "icon": "blazor" },
+      { "name": "Vite", "icon": "vite" },
+      { "name": "Tailwind CSS", "icon": "tailwindcss" },
+      { "name": "TypeScript", "icon": "typescript" }
+    ]
   },
   {
     "id": "data",
     "title": "Datos & Sistemas",
     "title_en": "Data & Systems",
-    "tags": ["PostgreSQL", "SQL Server", "SQLite", "OAuth2 / JWT", "Octave / MATLAB"]
+    "tags": [
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "SQL Server", "icon": "sqlserver" },
+      { "name": "SQLite", "icon": "sqlite" },
+      { "name": "OAuth2 / JWT", "icon": "oauth" },
+      { "name": "Octave / MATLAB", "icon": "matlab" }
+    ]
   }
 ]

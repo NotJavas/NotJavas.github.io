@@ -490,6 +490,24 @@ main { position: relative; z-index: 1; }
   padding: 6px 12px;
   border-radius: var(--radius-sm);
 }
+.tags span:has(.tag-icon) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 6px;
+}
+.tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #fff;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.tag-icon img { width: 14px; height: 14px; object-fit: contain; }
 
 /* ---------- Proyectos (bento) ---------- */
 .projects-grid {
@@ -652,7 +670,7 @@ main { position: relative; z-index: 1; }
   display: grid;
   grid-template-columns: minmax(300px, 380px) 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
   background: var(--surface);
   border: 2px solid var(--border);
   border-radius: var(--radius-lg);
