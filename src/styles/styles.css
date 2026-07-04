@@ -39,23 +39,23 @@
 }
 
 [data-theme="light"] {
-  /* Blanco entintado de azul, más suave a la vista */
-  --bg: #F3F5F8;
-  --surface: #FFFFFF;
-  --surface-2: #EAEFF5;
-  --border: rgba(30, 40, 60, 0.12);
-  --border-strong: rgba(30, 40, 60, 0.2);
+  /* Gris azulado suave, con más cuerpo que un blanco casi puro */
+  --bg: #DCE3EC;
+  --surface: #F4F7FA;
+  --surface-2: #E4EAF1;
+  --border: rgba(30, 40, 60, 0.14);
+  --border-strong: rgba(30, 40, 60, 0.24);
   --text: #0A141D;
-  --text-dim: #57606A;
-  
+  --text-dim: #4C5561;
+
   --accent: #0063E1;
   --accent-2: #008765;
   --on-accent: #FFFFFF;
-  
-  --glow-1: rgba(0, 99, 225, 0.1);
-  --glow-2: rgba(0, 135, 101, 0.09);
-  --nav-bg: rgba(243, 245, 248, 0.7);
-  --shadow: rgba(60, 80, 110, 0.12);
+
+  --glow-1: rgba(0, 99, 225, 0.14);
+  --glow-2: rgba(0, 135, 101, 0.12);
+  --nav-bg: rgba(220, 227, 236, 0.75);
+  --shadow: rgba(30, 45, 70, 0.16);
 
   --clay-hi: rgba(255, 255, 255, 0.9);
   --clay-lo: rgba(30, 50, 80, 0.12);
