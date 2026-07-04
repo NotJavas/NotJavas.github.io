@@ -12,6 +12,9 @@ import pricing from '../data/pricing.json';
 import combos from '../data/combos.json';
 import skills from '../data/skills.json';
 import softSkills from '../data/softskills.json';
+
+const byId = (id: string) => projects.find(p => p.id === id)!;
+const moreProjects = projects.filter(p => !['monei', 'defiants', 'destiny', 'desaparecidos', 'centinel', 'melts', 'titanic'].includes(p.id));
 ---
 
 <Layout>
@@ -26,7 +29,6 @@ import softSkills from '../data/softskills.json';
       <nav class="nav-links" id="navLinks">
         <a href="#about" data-en="About">Sobre mí</a>
         <a href="#projects" data-en="Projects">Proyectos</a>
-        <a href="#capturas" data-en="Screenshots">Capturas</a>
         <a href="#pricing" data-en="Pricing">Precios</a>
         <a href="#roadmap" data-en="Process">Proceso</a>
         <a href="#contact" class="nav-cta" data-en="Contact">Contacto</a>
@@ -131,32 +133,13 @@ import softSkills from '../data/softskills.json';
       </div>
     </section>
 
-    <section class="projects" id="projects">
+    <section class="shots" id="projects">
       <div class="section-head reveal">
         <p class="section-tag" data-en="Featured projects">Proyectos destacados</p>
-        <h2><span data-en="Work that shows">Trabajo que muestra</span> <span class="hl" data-en="how I think">cómo pienso</span></h2>
-      </div>
-
-      <div class="projects-grid">
-        {projects.map(project => (
-          <ProjectCard project={project} />
-        ))}
-
-        <article class="project-card reveal cta-card">
-          <h3 data-en="Your project here?">¿Tu proyecto aquí?</h3>
-          <p data-en="Tell me what you need and let's make it the next project on this list.">Cuéntame qué necesitas y lo convertimos en el siguiente proyecto en esta lista.</p>
-          <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary" data-en="Let's chat on WhatsApp">Platicamos por WhatsApp</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="shots" id="capturas">
-      <div class="section-head reveal">
-        <p class="section-tag" data-en="On screen">En pantalla</p>
-        <h2><span data-en="This is what">Así se ven</span> <span class="hl" data-en="my projects look like">mis proyectos</span></h2>
-        <p class="pricing-sub" data-en="Real screenshots wherever I can share them — the rest are faithful recreations of the real design. Want to see them running? Ask me for a live demo — it's free and no strings attached.">
-          Capturas reales donde puedo mostrarlas — el resto son recreaciones fieles al diseño real.
-          ¿Quieres verlas funcionando? Pídeme un demo en vivo — es gratis y sin compromiso.
+        <h2><span data-en="Work that shows">Trabajo que muestra</span> <span class="hl" data-en="how I think — and how it looks">cómo pienso — y cómo se ve</span></h2>
+        <p class="pricing-sub" data-en="The problem I solved, how I solved it, and real screenshots of it running — no wireframes, no mockups. Want to see it live? Ask for a demo — it's free, no strings attached.">
+          El problema que resolví, cómo lo resolví, y capturas reales de cómo se ve funcionando —
+          nada de wireframes ni maquetas. ¿Quieres verlo en vivo? Pídeme un demo, es gratis y sin compromiso.
         </p>
       </div>
 
@@ -164,9 +147,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">01</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">01</span>
+                <span class="project-cat" data-en={byId('monei').category_en}>{byId('monei').category}</span>
+              </div>
+              <span class="project-badge badge-private" data-en={byId('monei').badge.text_en}>{byId('monei').badge.text}</span>
+            </div>
             <h3>MONEI</h3>
-            <p data-en="Personal finance management — iOS">Gestión financiera personal — iOS</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('monei').caseStudy.problem_en}>{byId('monei').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('monei').caseStudy.solution_en}>{byId('monei').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('monei').caseStudy.result_en}>{byId('monei').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('monei').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece">
@@ -192,9 +197,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group accent-2 reverse reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">02</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">02</span>
+                <span class="project-cat" data-en={byId('defiants').category_en}>{byId('defiants').category}</span>
+              </div>
+              <a href={byId('defiants').badge.href} target="_blank" rel="noopener" class="project-badge badge-link" data-en={byId('defiants').badge.text_en}>{byId('defiants').badge.text}</a>
+            </div>
             <h3>Defiants</h3>
-            <p data-en="Tournament platform — Full-Stack Web">Plataforma de torneos — Full-Stack Web</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('defiants').caseStudy.problem_en}>{byId('defiants').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('defiants').caseStudy.solution_en}>{byId('defiants').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('defiants').caseStudy.result_en}>{byId('defiants').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('defiants').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece piece-wide">
@@ -214,9 +241,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">03</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">03</span>
+                <span class="project-cat" data-en={byId('destiny').category_en}>{byId('destiny').category}</span>
+              </div>
+              <a href={byId('destiny').badge.href} target="_blank" rel="noopener" class="project-badge badge-link" data-en={byId('destiny').badge.text_en}>{byId('destiny').badge.text}</a>
+            </div>
             <h3>Destiny</h3>
-            <p data-en="Local events on a map — Android">Eventos locales en un mapa — Android</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('destiny').caseStudy.problem_en}>{byId('destiny').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('destiny').caseStudy.solution_en}>{byId('destiny').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('destiny').caseStudy.result_en}>{byId('destiny').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('destiny').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece">
@@ -236,9 +285,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group accent-2 reverse reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">04</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">04</span>
+                <span class="project-cat" data-en={byId('desaparecidos').category_en}>{byId('desaparecidos').category}</span>
+              </div>
+              <span class="project-badge badge-private" data-en={byId('desaparecidos').badge.text_en}>{byId('desaparecidos').badge.text}</span>
+            </div>
             <h3 data-en="Missing Persons">Personas Desaparecidas</h3>
-            <p data-en="Analysis dashboard — Data Science">Dashboard de análisis — Data Science</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('desaparecidos').caseStudy.problem_en}>{byId('desaparecidos').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('desaparecidos').caseStudy.solution_en}>{byId('desaparecidos').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('desaparecidos').caseStudy.result_en}>{byId('desaparecidos').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('desaparecidos').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece piece-wide">
@@ -256,9 +327,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">05</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">05</span>
+                <span class="project-cat" data-en={byId('centinel').category_en}>{byId('centinel').category}</span>
+              </div>
+              <span class="project-badge badge-private" data-en={byId('centinel').badge.text_en}>{byId('centinel').badge.text}</span>
+            </div>
             <h3>Centinel</h3>
-            <p data-en="Road risk by segment — Data Science">Riesgo vial por tramo — Data Science</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('centinel').caseStudy.problem_en}>{byId('centinel').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('centinel').caseStudy.solution_en}>{byId('centinel').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('centinel').caseStudy.result_en}>{byId('centinel').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('centinel').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece piece-wide">
@@ -276,9 +369,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group accent-2 reverse reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">06</span>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">06</span>
+                <span class="project-cat" data-en={byId('melts').category_en}>{byId('melts').category}</span>
+              </div>
+              <span class="project-badge badge-private" data-en={byId('melts').badge.text_en}>{byId('melts').badge.text}</span>
+            </div>
             <h3>Melts</h3>
-            <p data-en="Landing page with original branding — Web">Landing page con marca propia — Web</p>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('melts').caseStudy.problem_en}>{byId('melts').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('melts').caseStudy.solution_en}>{byId('melts').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('melts').caseStudy.result_en}>{byId('melts').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('melts').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece piece-wide">
@@ -296,9 +411,31 @@ import softSkills from '../data/softskills.json';
 
         <div class="shot-group reveal">
           <div class="shot-group-label">
-            <span class="shot-group-num">07</span>
-            <h3>Titanic</h3>
-            <p data-en="Survival prediction — Machine Learning">Predicción de supervivencia — Machine Learning</p>
+            <div class="project-top">
+              <div class="showcase-title-row">
+                <span class="shot-group-num">07</span>
+                <span class="project-cat" data-en={byId('titanic').category_en}>{byId('titanic').category}</span>
+              </div>
+              <span class="project-badge badge-private" data-en={byId('titanic').badge.text_en}>{byId('titanic').badge.text}</span>
+            </div>
+            <h3 data-en="Titanic — Survival Prediction">Titanic — Predicción de Supervivencia</h3>
+            <div class="case">
+              <div class="case-row">
+                <span class="case-label" data-en="Problem">Problema</span>
+                <p data-en={byId('titanic').caseStudy.problem_en}>{byId('titanic').caseStudy.problem}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Solution">Solución</span>
+                <p data-en={byId('titanic').caseStudy.solution_en}>{byId('titanic').caseStudy.solution}</p>
+              </div>
+              <div class="case-row">
+                <span class="case-label" data-en="Result">Resultado</span>
+                <p data-en={byId('titanic').caseStudy.result_en}>{byId('titanic').caseStudy.result}</p>
+              </div>
+            </div>
+            <div class="tags">
+              {byId('titanic').tags.map(tag => <span>{tag}</span>)}
+            </div>
           </div>
           <div class="shot-group-pieces">
             <figure class="shot-piece piece-wide">
@@ -314,6 +451,21 @@ import softSkills from '../data/softskills.json';
           </div>
         </div>
 
+      </div>
+
+      <div class="showcase-more reveal">
+        <h3 class="skills-col-title" data-en="More projects">Más proyectos</h3>
+        <div class="projects-grid">
+          {moreProjects.map(project => (
+            <ProjectCard project={project} />
+          ))}
+
+          <article class="project-card reveal cta-card">
+            <h3 data-en="Your project here?">¿Tu proyecto aquí?</h3>
+            <p data-en="Tell me what you need and let's make it the next project on this list.">Cuéntame qué necesitas y lo convertimos en el siguiente proyecto en esta lista.</p>
+            <a href="https://wa.me/524425943653" target="_blank" rel="noopener" class="btn btn-primary" data-en="Let's chat on WhatsApp">Platicamos por WhatsApp</a>
+          </article>
+        </div>
       </div>
     </section>
 

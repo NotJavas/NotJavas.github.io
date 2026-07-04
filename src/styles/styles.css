@@ -639,12 +639,20 @@ main { position: relative; z-index: 1; }
   gap: 28px;
 }
 
+.showcase-more {
+  max-width: 1100px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+.showcase-more .skills-col-title { margin-bottom: 18px; }
+.showcase-more .projects-grid { max-width: none; margin: 0; padding: 0; }
+
 .shot-group {
   --group-accent: var(--accent);
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 36px;
-  align-items: center;
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  gap: 40px;
+  align-items: start;
   background: var(--surface);
   border: 2px solid var(--border);
   border-radius: var(--radius-lg);
@@ -653,11 +661,17 @@ main { position: relative; z-index: 1; }
 }
 .shot-group:hover { border-color: color-mix(in srgb, var(--group-accent) 50%, var(--border)); }
 .shot-group.accent-2 { --group-accent: var(--accent-2); }
-.shot-group.reverse { grid-template-columns: 1fr 220px; }
+.shot-group.reverse { grid-template-columns: 1fr minmax(300px, 380px); }
 .shot-group.reverse .shot-group-label { order: 2; }
 .shot-group.reverse .shot-group-pieces { order: 1; }
 
-.shot-group-label { text-align: left; }
+.shot-group-label {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 6px;
+}
 .shot-group-num {
   display: inline-block;
   font-family: 'JetBrains Mono', monospace;
@@ -667,10 +681,36 @@ main { position: relative; z-index: 1; }
   border: 2px solid var(--group-accent);
   border-radius: var(--radius-full);
   padding: 3px 10px;
-  margin-bottom: 12px;
 }
-.shot-group-label h3 { font-size: 1.4rem; margin: 0 0 8px; }
-.shot-group-label p { color: var(--text-dim); font-size: 0.92rem; line-height: 1.5; margin: 0; }
+.showcase-title-row { display: flex; align-items: center; gap: 10px; }
+.shot-group-label h3 { font-size: 1.4rem; margin: 0; }
+.shot-group-label .project-top { margin: 0; }
+
+/* El caso de estudio hereda el color del grupo (alterna azul/verde por fila) */
+.shot-group .case { position: relative; padding-left: 32px; }
+.shot-group .case::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: color-mix(in srgb, var(--group-accent) 35%, var(--border));
+}
+.shot-group .case-row { position: relative; }
+.shot-group .case-row::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--group-accent);
+  box-shadow: 0 0 0 3px var(--surface-2);
+}
+.shot-group .case-label,
+.shot-group .case-row:last-child .case-label { color: var(--group-accent); }
 
 .shot-group-pieces {
   display: flex;
@@ -1135,7 +1175,9 @@ main { position: relative; z-index: 1; }
   }
   .shot-group.reverse .shot-group-label,
   .shot-group.reverse .shot-group-pieces { order: initial; }
-  .shot-group-label { text-align: center; }
+  .shot-group-label { align-items: center; text-align: center; }
+  .shot-group-label .case { text-align: left; align-self: stretch; }
+  .shot-group-label .tags { justify-content: center; }
   .shot-group-pieces { min-height: 160px; }
   .shot-piece { width: 108px; }
   .shot-piece:not(:first-child) { margin-left: -30px; }
